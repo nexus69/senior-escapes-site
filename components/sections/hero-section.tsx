@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Play, ArrowRight, MapPin, Users, Shield } from 'lucide-react';
 import { useState } from 'react';
-import { WeatherWidget } from '@/components/weather-widget';
+// import { WeatherWidget } from '@/components/weather-widget'; // Temporairement désactivé
 
 interface HeroSectionProps {
   onStartWizard: () => void;
@@ -28,7 +28,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
 
       {/* Weather Widget - Positioned top right */}
       <div className="absolute top-24 right-4 lg:right-8 z-20 w-64 hidden lg:block">
-        <WeatherWidget />
+        {/* <WeatherWidget /> */}
       </div>
 
       {/* Content */}
@@ -79,7 +79,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
               </div>
             </div>
 
-            {/* CTA Buttons - Fixed spacing and responsive */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6 max-w-2xl">
               <Button
                 onClick={onStartWizard}
@@ -107,7 +107,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
           <div className="lg:col-span-5 space-y-6 mt-12 lg:mt-0">
             {/* Weather Widget for mobile */}
             <div className="lg:hidden mb-6">
-              <WeatherWidget />
+              {/* <WeatherWidget /> */}
             </div>
 
             <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-white/20">
