@@ -562,10 +562,15 @@ export function BlogSection() {
                       </div>
                     </div>
                     
-                    <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
-                      Découvrir nos séjours
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
+<a href="/#equipe">
+  <Button
+    size="lg"
+    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+  >
+    Découvrez notre équipe
+    <ArrowRight className="w-5 h-5 ml-2" />
+  </Button>
+</a>
                   </div>
                 </div>
               </div>
