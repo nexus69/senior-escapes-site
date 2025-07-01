@@ -300,7 +300,7 @@ export function BlogSection() {
     description: string;
     onClose: () => void;
   }) => (
-    <Dialog open={!!imageUrl} onOpenChange={() => onClose()}>
+    <Dialog open={!!imageUrl} onOpenChange={(newOpenState) => !newOpenState && onClose()}>
       <DialogContent className="max-w-6xl w-full p-0 bg-black/95 border-0">
         <div className="relative">
           <Button
