@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { 
   BookOpen, 
   Calendar, 
@@ -302,6 +302,9 @@ export function BlogSection() {
   }) => (
     <Dialog open={!!imageUrl} onOpenChange={(newOpenState) => !newOpenState && onClose()}>
       <DialogContent className="max-w-6xl w-full p-0 bg-black/95 border-0">
+        <DialogHeader>
+          <DialogTitle className="sr-only">{title}</DialogTitle>
+        </DialogHeader>
         <div className="relative">
           <Button
             variant="ghost"
