@@ -18,7 +18,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <img
-            src="https://images.pexels.com/photos/3791466/pexels-photo-3791466.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+            src="https://images.pexels.com/photos/15774203/pexels-photo-15774203.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Vue sur la Méditerranée en Tunisie"
             className="w-full h-full object-cover"
           />
