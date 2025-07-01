@@ -421,7 +421,7 @@ export function PersonalizationWizard({ open, onClose }: PersonalizationWizardPr
   };
 
   return (
-    <Dialog open={open} onOpenChange={onClose}>
+    <Dialog open={open} onOpenChange={(newOpenState) => !newOpenState && onClose()}>
       <DialogContent className="max-w-4xl max-h-[95vh] overflow-y-auto mx-4">
         <DialogHeader>
           <DialogTitle className="flex items-center space-x-2 text-xl sm:text-2xl">
