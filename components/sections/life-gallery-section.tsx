@@ -173,8 +173,10 @@ export function LifeGallerySection() {
                   key={category.id}
                   value={category.id}
                   className="flex flex-col items-center p-4 space-y-2 rounded-lg transition-all duration-300
-                    text-gray-500 hover:text-[#2663ec]
-                    data-[state=active]:text-[#2663ec] data-[state=active]:bg-white data-[state=active]:shadow-md"
+                    cursor-pointer text-gray-500
+                    hover:text-[#2663ec]
+                    data-[state=active]:text-[#2663ec]
+                    data-[state=active]:bg-white data-[state=active]:shadow-md"
                 >
                   <Icon className="w-5 h-5 text-current" />
                   <span className="font-medium text-sm">{category.label}</span>
@@ -198,7 +200,6 @@ export function LifeGallerySection() {
                   </div>
                 </Card>
 
-                {/* Images */}
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex items-center justify-between">
                     <h3 className="text-2xl font-bold text-gray-900">Galerie photos</h3>
@@ -228,7 +229,6 @@ export function LifeGallerySection() {
           ))}
         </Tabs>
 
-        {/* Vidéo Section */}
         <div className="mt-20">
           <Separator className="mb-12" />
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center text-white">
