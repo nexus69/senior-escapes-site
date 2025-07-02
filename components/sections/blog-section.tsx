@@ -148,12 +148,12 @@ export function BlogSection() {
       excerpt: "Découvrez comment notre équipe francophone vous accompagne à chaque étape de votre séjour pour une expérience sans stress.",
       gallery: [
         {
-          url: "https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Équipe d'accueil",
           description: "Notre équipe francophone à votre service"
         },
         {
-          url: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Service conciergerie",
           description: "Assistance personnalisée 24h/24"
         },
@@ -163,7 +163,7 @@ export function BlogSection() {
           description: "Accompagnement dans toutes vos démarches"
         },
         {
-          url: "https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Suivi médical",
           description: "Coordination avec les professionnels de santé"
         }
