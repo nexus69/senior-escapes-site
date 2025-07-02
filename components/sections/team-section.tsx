@@ -44,7 +44,7 @@ export function TeamSection() {
       id: 3,
       name: 'Marie-Claire Dubois',
       role: 'Conseillère Bien-être',
-      avatar: 'https://images.pexels.com/photos/3768126/pexels-photo-3768126.jpeg?auto=compress&cs=tinysrgb&w=300',
+      avatar: 'https://images.generated.photos/rmbcjjxdKaHetZiBaJ5gM44U1kCKQno0JLBNZkB_T9s/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDgzODcwLmpwZw.jpg?auto=compress&cs=tinysrgb&w=300',
       specialties: ['Yoga', 'Méditation', 'Nutrition senior'],
       experience: '12 ans',
       languages: ['Français', 'Espagnol'],
