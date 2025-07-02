@@ -158,7 +158,7 @@ export function BlogSection() {
           description: "Assistance personnalisée 24h/24"
         },
         {
-          url: "https://images.pexels.com/photos/3768097/pexels-photo-3768097.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Coordination résidents",
           description: "Accompagnement dans toutes vos démarches"
         },
