@@ -101,7 +101,7 @@ export function LifeGallerySection() {
       description: 'Une cuisine méditerranéenne savoureuse et équilibrée',
       images: [
         {
-          url: 'https://images.pexels.com/photos/3764353/pexels-photo-3764353.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/5863647/pexels-photo-5863647.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Cuisine méditerranéenne raffinée',
           description: 'Plats savoureux préparés avec des produits locaux frais : poissons, légumes, huile d\'olive premium'
         },
