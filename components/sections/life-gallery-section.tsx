@@ -55,7 +55,7 @@ export function LifeGallerySection() {
       description: 'Un programme riche et varié adapté à vos envies et votre rythme',
       images: [
         {
-          url: 'https://images.pexels.com/photos/3791466/pexels-photo-3791466.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/8174441/pexels-photo-8174441.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Yoga et bien-être face à la mer',
           description: 'Séances quotidiennes de yoga, méditation et tai-chi sur notre terrasse panoramique avec vue mer'
         },
@@ -83,7 +83,7 @@ export function LifeGallerySection() {
           description: 'Moments de partage autour d\'un verre, jeux de société et discussions dans notre salon principal'
         },
         {
-          url: 'https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/7938731/pexels-photo-7938731.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Clubs de lecture et échanges culturels',
           description: 'Rencontres hebdomadaires pour partager lectures, expériences et découvertes culturelles'
         },
