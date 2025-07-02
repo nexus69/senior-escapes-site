@@ -12,7 +12,7 @@ export function Header({ onStartWizard }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'La Vie sur place', href: '#vie-sur-place' },
+    { name: 'La vie sur place', href: '#vie-sur-place' },
     { name: 'Votre séjour', href: '#articles' },
     { name: 'Activités', href: '#activites' },
     { name: 'Notre équipe', href: '#equipe' },
