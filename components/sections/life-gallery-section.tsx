@@ -111,7 +111,7 @@ export function LifeGallerySection() {
           description: 'Salle de restaurant climatisée de 120 places avec baies vitrées et terrasse extérieure'
         },
         {
-          url: 'https://images.pexels.com/photos/3771118/pexels-photo-3771118.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/5480243/pexels-photo-5480243.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Ateliers culinaires interactifs',
           description: 'Cours de cuisine tunisienne avec notre chef : couscous, tajines, pâtisseries orientales'
         }
