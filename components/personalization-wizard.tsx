@@ -82,46 +82,20 @@ export function PersonalizationWizard({ onClose }: { onClose: () => void }) {
             <div className="grid gap-4">
               <div>
                 <Label>Prénom *</Label>
-                <Input
-                  name="Prénom"
-                  value={formData.firstName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, firstName: e.target.value })
-                  }
-                  required
-                />
+                <Input name="Prénom" required />
               </div>
               <div>
                 <Label>Nom *</Label>
-                <Input
-                  name="Nom"
-                  value={formData.lastName}
-                  onChange={(e) =>
-                    setFormData({ ...formData, lastName: e.target.value })
-                  }
-                  required
-                />
+                <Input name="Nom" required />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label>Âge</Label>
-                  <Input
-                    name="Âge"
-                    value={formData.age}
-                    onChange={(e) =>
-                      setFormData({ ...formData, age: e.target.value })
-                    }
-                  />
+                  <Input name="Âge" />
                 </div>
                 <div>
                   <Label>Nationalité</Label>
-                  <Input
-                    name="Nationalité"
-                    value={formData.nationality}
-                    onChange={(e) =>
-                      setFormData({ ...formData, nationality: e.target.value })
-                    }
-                  />
+                  <Input name="Nationalité" />
                 </div>
               </div>
             </div>
@@ -132,43 +106,19 @@ export function PersonalizationWizard({ onClose }: { onClose: () => void }) {
             <div className="grid gap-4">
               <div>
                 <Label>Durée de séjour</Label>
-                <Input
-                  name="Durée de séjour"
-                  value={formData.duration}
-                  onChange={(e) =>
-                    setFormData({ ...formData, duration: e.target.value })
-                  }
-                />
+                <Input name="Durée de séjour" />
               </div>
               <div>
                 <Label>Période</Label>
-                <Input
-                  name="Période"
-                  value={formData.period}
-                  onChange={(e) =>
-                    setFormData({ ...formData, period: e.target.value })
-                  }
-                />
+                <Input name="Période" />
               </div>
               <div>
                 <Label>Budget</Label>
-                <Input
-                  name="Budget"
-                  value={formData.budget}
-                  onChange={(e) =>
-                    setFormData({ ...formData, budget: e.target.value })
-                  }
-                />
+                <Input name="Budget" />
               </div>
               <div>
                 <Label>Type de logement</Label>
-                <Input
-                  name="Type de logement"
-                  value={formData.accommodation}
-                  onChange={(e) =>
-                    setFormData({ ...formData, accommodation: e.target.value })
-                  }
-                />
+                <Input name="Type de logement" />
               </div>
             </div>
           )}
@@ -180,10 +130,7 @@ export function PersonalizationWizard({ onClose }: { onClose: () => void }) {
               <div className="flex flex-wrap gap-4">
                 {['Culture', 'Nature', 'Gastronomie', 'Sport', 'Relaxation'].map((label) => (
                   <label key={label} className="flex items-center gap-2">
-                    <Checkbox
-                      checked={formData.interests.includes(label)}
-                      onCheckedChange={() => handleCheckboxChange(label)}
-                    />
+                    <Checkbox name="Centres d’intérêt" value={label} />
                     {label}
                   </label>
                 ))}
@@ -196,78 +143,27 @@ export function PersonalizationWizard({ onClose }: { onClose: () => void }) {
             <div className="grid gap-4">
               <div>
                 <Label>Mobilité</Label>
-                <Input
-                  name="Mobilité"
-                  value={formData.mobility}
-                  onChange={(e) =>
-                    setFormData({ ...formData, mobility: e.target.value })
-                  }
-                />
+                <Input name="Mobilité" />
               </div>
               <div>
                 <Label>Restrictions alimentaires</Label>
-                <Input
-                  name="Restrictions alimentaires"
-                  value={formData.dietaryRestrictions}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      dietaryRestrictions: e.target.value
-                    })
-                  }
-                />
+                <Input name="Restrictions alimentaires" />
               </div>
               <div>
                 <Label>Conditions de santé</Label>
-                <Input
-                  name="Conditions de santé"
-                  value={formData.healthConditions}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      healthConditions: e.target.value
-                    })
-                  }
-                />
+                <Input name="Conditions de santé" />
               </div>
               <div>
                 <Label>Médicaments</Label>
-                <Input
-                  name="Médicaments"
-                  value={formData.medications}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      medications: e.target.value
-                    })
-                  }
-                />
+                <Input name="Médicaments" />
               </div>
               <div>
                 <Label>Contact d'urgence</Label>
-                <Input
-                  name="Contact d'urgence"
-                  value={formData.emergencyContact}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      emergencyContact: e.target.value
-                    })
-                  }
-                />
+                <Input name="Contact d'urgence" />
               </div>
               <div>
                 <Label>Besoins particuliers</Label>
-                <Input
-                  name="Besoins particuliers"
-                  value={formData.additionalNeeds}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      additionalNeeds: e.target.value
-                    })
-                  }
-                />
+                <Input name="Besoins particuliers" />
               </div>
             </div>
           )}
@@ -283,7 +179,6 @@ export function PersonalizationWizard({ onClose }: { onClose: () => void }) {
             {currentStep === steps.length - 1 ? (
               <Button
                 type="submit"
-                disabled={!isStepValid()}
                 className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 h-12 text-base font-semibold"
               >
                 <Check className="w-4 h-4 mr-2" />
@@ -293,7 +188,6 @@ export function PersonalizationWizard({ onClose }: { onClose: () => void }) {
               <Button
                 type="button"
                 onClick={nextStep}
-                disabled={!isStepValid()}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white h-12 text-base font-semibold"
               >
                 <span>Suivant</span>
