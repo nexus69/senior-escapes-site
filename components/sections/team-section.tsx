@@ -14,7 +14,7 @@ export function TeamSection() {
       id: 1,
       name: 'Dr. Sophie Martineau',
       role: 'Directrice & Fondatrice',
-      avatar: 'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=300',
+      avatar: 'https://images.generated.photos/WCExNLBmxRJRbP_1MVpv_3G4IrRExowujljU3ZkUDic/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODk0NDU3LmpwZw.jpg?auto=compress&cs=tinysrgb&w=300',
       specialties: ['Gériatrie', 'Accompagnement senior', 'Expatriation'],
       experience: '15 ans',
       languages: ['Français', 'Arabe', 'Anglais'],
