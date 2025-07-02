@@ -78,7 +78,7 @@ export function LifeGallerySection() {
       description: 'Une famille chaleureuse de retraités européens actifs',
       images: [
         {
-          url: 'https://images.pexels.com/photos/3768127/pexels-photo-3768127.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/8170256/pexels-photo-8170256.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Soirées conviviales et chaleureuses',
           description: 'Moments de partage autour d\'un verre, jeux de société et discussions dans notre salon principal'
         },
