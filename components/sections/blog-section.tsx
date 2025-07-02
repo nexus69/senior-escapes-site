@@ -31,7 +31,7 @@ export function BlogSection() {
   const articles = [
     {
       id: 1,
-      title: "Nos Logements d'Exception",
+      title: "Nos logements d'exception",
       subtitle: "Découvrez votre nouveau chez-vous sous le soleil tunisien",
       category: "Logement",
       readTime: "5 min",
@@ -138,7 +138,7 @@ export function BlogSection() {
     },
     {
       id: 2,
-      title: "Votre Accompagnement Sur Mesure",
+      title: "Votre accompagnement sur mesure",
       subtitle: "Une équipe dédiée pour votre sérénité au quotidien",
       category: "Services",
       readTime: "4 min",
