@@ -220,7 +220,7 @@ export function BlogSection() {
       readTime: "6 min",
       date: "8 janvier 2025",
       author: "Ahmed Ben Salem",
-      image: "https://images.pexels.com/photos/3764353/pexels-photo-3764353.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "https://images.pexels.com/photos/6603374/pexels-photo-6603374.jpeg?auto=compress&cs=tinysrgb&w=800",
       excerpt: "Plongez dans l'authenticité tunisienne à travers notre programme culturel et gastronomique unique.",
       gallery: [
         {
