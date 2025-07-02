@@ -29,7 +29,7 @@ export function TeamSection() {
       id: 2,
       name: 'Ahmed Ben Salem',
       role: 'Responsable Culturel',
-      avatar: 'https://images.generated.photos/rmbcjjxdKaHetZiBaJ5gM44U1kCKQno0JLBNZkB_T9s/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDgzODcwLmpwZw.jpg?auto=compress&cs=tinysrgb&w=300',
+      avatar: 'https://images.generated.photos/FrgA3nhd9hKhAJmdVW9TJPLZRjMG7PcErv2fWZzHZV4/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTY2MjY0LmpwZw.jpg?auto=compress&cs=tinysrgb&w=300',
       specialties: ['Histoire tunisienne', 'Excursions', 'Art local'],
       experience: '8 ans',
       languages: ['Arabe', 'Français', 'Italien'],
