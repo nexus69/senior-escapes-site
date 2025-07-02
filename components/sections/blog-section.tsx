@@ -144,7 +144,7 @@ export function BlogSection() {
       readTime: "4 min",
       date: "12 janvier 2025",
       author: "Jean-Pierre Lefort",
-      image: "https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "https://images.pexels.com/photos/207896/pexels-photo-207896.jpeg?auto=compress&cs=tinysrgb&w=800",
       excerpt: "Découvrez comment notre équipe francophone vous accompagne à chaque étape de votre séjour pour une expérience sans stress.",
       gallery: [
         {
