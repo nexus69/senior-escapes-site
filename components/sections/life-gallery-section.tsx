@@ -65,7 +65,7 @@ export function LifeGallerySection() {
           description: 'Cours de peinture, poterie, calligraphie arabe animés par des artistes locaux expérimentés'
         },
         {
-          url: 'https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/27622077/pexels-photo-27622077.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Excursions culturelles guidées',
           description: 'Découverte du patrimoine tunisien avec guide francophone : Carthage, Sidi Bou Saïd, Kairouan'
         }
