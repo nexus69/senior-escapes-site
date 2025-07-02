@@ -106,7 +106,7 @@ export function LifeGallerySection() {
           description: 'Plats savoureux préparés avec des produits locaux frais : poissons, légumes, huile d\'olive premium'
         },
         {
-          url: 'https://images.pexels.com/photos/3764354/pexels-photo-3764354.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          url: 'https://images.pexels.com/photos/5358330/pexels-photo-5358330.jpeg?auto=compress&cs=tinysrgb&w=1200',
           title: 'Restaurant panoramique avec vue mer',
           description: 'Salle de restaurant climatisée de 120 places avec baies vitrées et terrasse extérieure'
         },
