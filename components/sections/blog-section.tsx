@@ -144,7 +144,7 @@ export function BlogSection() {
       readTime: "4 min",
       date: "12 janvier 2025",
       author: "Jean-Pierre Lefort",
-      image: "https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg?auto=compress&cs=tinysrgb&w=800",
       excerpt: "Découvrez comment notre équipe francophone vous accompagne à chaque étape de votre séjour pour une expérience sans stress.",
       gallery: [
         {
@@ -153,12 +153,12 @@ export function BlogSection() {
           description: "Notre équipe francophone à votre service"
         },
         {
-          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/7682196/pexels-photo-7682196.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Service conciergerie",
           description: "Assistance personnalisée 24h/24"
         },
         {
-          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/8439648/pexels-photo-8439648.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Coordination résidents",
           description: "Accompagnement dans toutes vos démarches"
         },
