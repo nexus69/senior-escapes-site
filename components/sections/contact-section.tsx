@@ -6,53 +6,20 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from '@/components/ui/select';
 import { Phone, Mail, MapPin, MessageCircle, Calendar, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
 
 interface ContactSectionProps {
   onStartWizard: () => void;
 }
 
 export function ContactSection({ onStartWizard }: ContactSectionProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-    preferredContact: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous recontacterons dans les 24h. Merci pour votre intérêt.",
-    });
-    
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-      preferredContact: ''
-    });
-    setIsSubmitting(false);
-  };
-
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
   const contactMethods = [
     {
       icon: Phone,
@@ -80,24 +47,26 @@ export function ContactSection({ onStartWizard }: ContactSectionProps) {
   return (
     <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
             <MessageCircle className="w-4 h-4 mr-2 text-blue-600" />
-            <span className="text-blue-700 font-medium text-sm sm:text-base">Parlons de votre projet</span>
+            <span className="text-blue-700 font-medium text-sm sm:text-base">
+              Parlons de votre projet
+            </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
             Construisons ensemble
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 block sm:inline"> votre séjour idéal</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 block sm:inline">
+              votre séjour idéal
+            </span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-            Notre équipe est là pour répondre à toutes vos questions et vous accompagner 
+            Notre équipe est là pour répondre à toutes vos questions et vous accompagner
             dans la création de votre expérience Senior Escapes sur mesure.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-          {/* Contact Form */}
           <Card className="p-6 sm:p-8 shadow-xl order-2 lg:order-1">
             <div className="mb-6 sm:mb-8">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Contactez-nous</h3>
@@ -106,28 +75,19 @@ export function ContactSection({ onStartWizard }: ContactSectionProps) {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+            <form
+              action="https://formsubmit.co/sstinus@gmail.com"
+              method="POST"
+              className="space-y-4 sm:space-y-6"
+            >
               <div className="grid grid-cols-1 gap-4">
                 <div>
                   <Label htmlFor="name" className="text-sm sm:text-base">Nom complet *</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => handleChange('name', e.target.value)}
-                    placeholder="Votre nom"
-                    required
-                    className="mt-1 h-12 text-base"
-                  />
+                  <Input id="name" name="name" placeholder="Votre nom" required className="mt-1 h-12 text-base" />
                 </div>
                 <div>
                   <Label htmlFor="phone" className="text-sm sm:text-base">Téléphone</Label>
-                  <Input
-                    id="phone"
-                    value={formData.phone}
-                    onChange={(e) => handleChange('phone', e.target.value)}
-                    placeholder="+33 X XX XX XX XX"
-                    className="mt-1 h-12 text-base"
-                  />
+                  <Input id="phone" name="phone" placeholder="+33 X XX XX XX XX" className="mt-1 h-12 text-base" />
                 </div>
               </div>
 
@@ -135,9 +95,8 @@ export function ContactSection({ onStartWizard }: ContactSectionProps) {
                 <Label htmlFor="email" className="text-sm sm:text-base">Email *</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
-                  value={formData.email}
-                  onChange={(e) => handleChange('email', e.target.value)}
                   placeholder="votre.email@exemple.com"
                   required
                   className="mt-1 h-12 text-base"
@@ -146,78 +105,72 @@ export function ContactSection({ onStartWizard }: ContactSectionProps) {
 
               <div>
                 <Label htmlFor="subject" className="text-sm sm:text-base">Sujet de votre demande</Label>
-                <Select value={formData.subject} onValueChange={(value) => handleChange('subject', value)}>
-                  <SelectTrigger className="mt-1 h-12 text-base">
-                    <SelectValue placeholder="Choisissez un sujet" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="information">Demande d'information générale</SelectItem>
-                    <SelectItem value="sejour">Organisation d'un séjour</SelectItem>
-                    <SelectItem value="tarifs">Tarifs et formules</SelectItem>
-                    <SelectItem value="visite">Visite des installations</SelectItem>
-                    <SelectItem value="medical">Questions médicales</SelectItem>
-                    <SelectItem value="autre">Autre demande</SelectItem>
-                  </SelectContent>
-                </Select>
+                <select
+                  name="subject"
+                  className="mt-1 h-12 w-full rounded-md border border-gray-300 text-base px-3"
+                >
+                  <option value="">Choisissez un sujet</option>
+                  <option value="information">Demande d'information générale</option>
+                  <option value="sejour">Organisation d'un séjour</option>
+                  <option value="tarifs">Tarifs et formules</option>
+                  <option value="visite">Visite des installations</option>
+                  <option value="medical">Questions médicales</option>
+                  <option value="autre">Autre demande</option>
+                </select>
               </div>
 
               <div>
                 <Label htmlFor="preferredContact" className="text-sm sm:text-base">Mode de contact préféré</Label>
-                <Select value={formData.preferredContact} onValueChange={(value) => handleChange('preferredContact', value)}>
-                  <SelectTrigger className="mt-1 h-12 text-base">
-                    <SelectValue placeholder="Comment préférez-vous être contacté ?" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="phone">Téléphone</SelectItem>
-                    <SelectItem value="email">Email</SelectItem>
-                    <SelectItem value="video">Visioconférence</SelectItem>
-                  </SelectContent>
-                </Select>
+                <select
+                  name="preferred_contact"
+                  className="mt-1 h-12 w-full rounded-md border border-gray-300 text-base px-3"
+                >
+                  <option value="">Comment préférez-vous être contacté ?</option>
+                  <option value="phone">Téléphone</option>
+                  <option value="email">Email</option>
+                  <option value="video">Visioconférence</option>
+                </select>
               </div>
 
               <div>
                 <Label htmlFor="message" className="text-sm sm:text-base">Votre message</Label>
                 <Textarea
                   id="message"
-                  value={formData.message}
-                  onChange={(e) => handleChange('message', e.target.value)}
+                  name="message"
                   placeholder="Décrivez-nous votre projet, vos attentes, vos questions..."
                   rows={4}
                   className="mt-1 text-base"
                 />
               </div>
 
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_subject" value="Nouveau message via le site" />
+              <input type="hidden" name="_next" value="https://goseniorescape.netlify.app/#contact" />
+              <input type="hidden" name="_email" value="sstinus@gmail.com" />
+              <input type="hidden" name="_email_text" value="Voir les réponses dans le Google Sheet : https://docs.google.com/spreadsheets/d/1qWJwcHRbhdRobrs_3BlZOS0AdH677zNiQjclqy10BQI" />
+
               <div className="flex flex-col gap-4">
                 <Button
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-base sm:text-lg font-semibold"
                 >
-                  {isSubmitting ? (
-                    <>Envoi en cours...</>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Envoyer le message
-                    </>
-                  )}
+                  <Send className="w-5 h-5 mr-2" /> Envoyer le message
                 </Button>
+
                 <Button
                   type="button"
                   onClick={onStartWizard}
                   size="lg"
                   className="w-full bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 border-0 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl py-4 text-base sm:text-lg"
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Questionnaire personnalisé (5 min)
+                  <Calendar className="w-5 h-5 mr-2" /> Questionnaire personnalisé (5 min)
                 </Button>
               </div>
             </form>
           </Card>
 
-          {/* Contact Information & Methods */}
           <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
-            {/* Contact Methods */}
             <div className="space-y-4 sm:space-y-6">
               {contactMethods.map((method, index) => {
                 const Icon = method.icon;
@@ -226,7 +179,7 @@ export function ContactSection({ onStartWizard }: ContactSectionProps) {
                   green: 'bg-green-100 text-green-600',
                   orange: 'bg-orange-100 text-orange-600'
                 };
-                
+
                 return (
                   <Card key={index} className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300">
                     <div className="flex items-start space-x-4">
@@ -244,7 +197,6 @@ export function ContactSection({ onStartWizard }: ContactSectionProps) {
               })}
             </div>
 
-            {/* Office Hours */}
             <Card className="p-4 sm:p-6">
               <h4 className="font-semibold text-gray-900 mb-4 text-base sm:text-lg">Heures d'ouverture</h4>
               <div className="space-y-2 text-sm sm:text-base">
