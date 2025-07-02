@@ -148,7 +148,7 @@ export function BlogSection() {
       excerpt: "Découvrez comment notre équipe francophone vous accompagne à chaque étape de votre séjour pour une expérience sans stress.",
       gallery: [
         {
-          url: "https://images.pexels.com/photos/8972293/pexels-photo-8972293.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/3184424/pexels-photo-3184424.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Équipe d'accueil",
           description: "Notre équipe francophone à votre service"
         },
