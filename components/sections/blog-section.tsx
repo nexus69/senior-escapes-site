@@ -224,7 +224,7 @@ export function BlogSection() {
       excerpt: "Plongez dans l'authenticité tunisienne à travers notre programme culturel et gastronomique unique.",
       gallery: [
         {
-          url: "https://images.pexels.com/photos/3764353/pexels-photo-3764353.jpeg?auto=compress&cs=tinysrgb&w=1200",
+          url: "https://images.pexels.com/photos/5863647/pexels-photo-5863647.jpeg?auto=compress&cs=tinysrgb&w=1200",
           title: "Cuisine tunisienne",
           description: "Découverte des saveurs méditerranéennes authentiques"
         },
