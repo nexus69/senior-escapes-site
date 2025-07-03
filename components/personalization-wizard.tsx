@@ -1,5 +1,3 @@
-OK en tous cas voici le code actuel :
-
 'use client';
 
 import { useState } from 'react';
