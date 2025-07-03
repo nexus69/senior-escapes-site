@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { HeroSection } from '@/components/sections/hero-section';
 import { PillarsSection } from '@/components/sections/pillars-section';
+import { PackagesSection } from '@/components/sections/packages-section';
 import { LifeGallerySection } from '@/components/sections/life-gallery-section';
 import { BlogSection } from '@/components/sections/blog-section';
 import { CalendarSection } from '@/components/sections/calendar-section';
@@ -24,6 +25,7 @@ export default function Home() {
       <main className="relative">
         <HeroSection onStartWizard={() => setShowWizard(true)} />
         <PillarsSection />
+        <PackagesSection onStartWizard={() => setShowWizard(true)} />
         <LifeGallerySection />
         <BlogSection />
         <CalendarSection onStartWizard={() => setShowWizard(true)} />
