@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Check, ArrowLeft, Calendar, Phone, MessageCircle, Star, Users, Shield, Heart } from 'lucide-react';
 import Link from 'next/link';
 import { BookingForm } from '@/components/booking-form';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export default function EssentielPage() {
   const [showBookingForm, setShowBookingForm] = useState(false);
@@ -26,6 +27,11 @@ export default function EssentielPage() {
     color: 'blue',
     badge: 'Découverte'
   };
+
+  const breadcrumbItems = [
+    { label: 'Nos Offres', href: '/#formules' },
+    { label: 'Séjour Essentiel' }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -52,6 +58,9 @@ export default function EssentielPage() {
           </div>
         </div>
       </div>
+
+      {/* Breadcrumb */}
+      <Breadcrumb items={breadcrumbItems} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
