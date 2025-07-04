@@ -1,12 +1,32 @@
 'use client';
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowLeft, Calendar, Phone, MessageCircle, Star, Users, Shield, Heart } from 'lucide-react';
 import Link from 'next/link';
+import { BookingForm } from '@/components/booking-form';
 
 export default function EssentielPage() {
+  const [showBookingForm, setShowBookingForm] = useState(false);
+
+  const formulaData = {
+    id: 'essentiel',
+    name: 'Séjour Essentiel',
+    price: 1200,
+    duration: '1-2 mois',
+    description: 'Votre première expérience en Tunisie avec tout l\'essentiel pour un séjour serein et accompagné.',
+    features: [
+      'Hébergement confortable premium',
+      'Référent francophone dédié',
+      'Activités hebdomadaires raffinées',
+      'Assistance 24h/24 premium'
+    ],
+    color: 'blue',
+    badge: 'Découverte'
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Landing Page Header - Simplified */}
@@ -62,6 +82,7 @@ export default function EssentielPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
+                onClick={() => setShowBookingForm(true)}
                 className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -298,6 +319,7 @@ export default function EssentielPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
+              onClick={() => setShowBookingForm(true)}
               className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold"
             >
               <Calendar className="w-5 h-5 mr-2" />
@@ -313,6 +335,13 @@ export default function EssentielPage() {
           </div>
         </div>
       </div>
+
+      {/* Booking Form */}
+      <BookingForm 
+        open={showBookingForm}
+        onClose={() => setShowBookingForm(false)}
+        formula={formulaData}
+      />
     </div>
   );
 }

@@ -1,12 +1,33 @@
 'use client';
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowLeft, Calendar, Phone, MessageCircle, Star, Users, Shield, Heart, Camera } from 'lucide-react';
 import Link from 'next/link';
+import { BookingForm } from '@/components/booking-form';
 
 export default function PremiumPage() {
+  const [showBookingForm, setShowBookingForm] = useState(false);
+
+  const formulaData = {
+    id: 'premium',
+    name: 'Séjour Premium',
+    price: 1000,
+    duration: '3-4 mois',
+    description: 'L\'expérience complète avec excursions culturelles, suivi médical privilégié et services de conciergerie.',
+    features: [
+      'Tout l\'Essentiel inclus',
+      'Excursions culturelles d\'exception',
+      'Suivi médical privilégié',
+      'Transferts aéroport premium',
+      'Service de conciergerie'
+    ],
+    color: 'orange',
+    badge: 'Plus populaire'
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
       {/* Landing Page Header - Simplified */}
@@ -62,6 +83,7 @@ export default function PremiumPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
+                onClick={() => setShowBookingForm(true)}
                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -227,6 +249,7 @@ export default function PremiumPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
+              onClick={() => setShowBookingForm(true)}
               className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 text-lg font-semibold"
             >
               <Calendar className="w-5 h-5 mr-2" />
@@ -257,6 +280,13 @@ export default function PremiumPage() {
           </div>
         </div>
       </div>
+
+      {/* Booking Form */}
+      <BookingForm 
+        open={showBookingForm}
+        onClose={() => setShowBookingForm(false)}
+        formula={formulaData}
+      />
     </div>
   );
 }
