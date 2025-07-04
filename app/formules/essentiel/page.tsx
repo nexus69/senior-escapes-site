@@ -305,8 +305,7 @@ export default function EssentielPage() {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold"
+              className="bg-blue-700 text-white hover:bg-blue-800 border-0 px-8 py-4 text-lg font-semibold"
             >
               <Phone className="w-5 h-5 mr-2" />
               Parler à Sophie : +33 1 XX XX XX XX
