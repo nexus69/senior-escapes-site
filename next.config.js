@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  images: { 
-    unoptimized: true 
+  images: {
+    unoptimized: true,
   },
   trailingSlash: true,
-  distDir: 'out'
+  basePath: '/senior-escapes-site', // correspond exactement au nom de ton dépôt GitHub
 };
 
 module.exports = nextConfig;
