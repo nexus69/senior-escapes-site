@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
-  basePath: '/senior-escapes-site', // correspond exactement au nom de ton dépôt GitHub
+  assetPrefix: '/senior-escapes-site/',
+  basePath: '/senior-escapes-site',
 };
 
 module.exports = nextConfig;
