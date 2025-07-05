@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: '/senior-escapes-site/',
   basePath: '/senior-escapes-site',
+  assetPrefix: '/senior-escapes-site/',
 };
 
 module.exports = nextConfig;
