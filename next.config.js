@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/senior-escapes-site',
-  assetPrefix: '/senior-escapes-site/',
+  // Suppression des configurations problématiques pour le développement
+  // basePath et assetPrefix sont uniquement pour la production
 };
 
 module.exports = nextConfig;
