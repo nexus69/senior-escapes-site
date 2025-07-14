@@ -1,11 +1,6 @@
 [build]
-  publish = "out"
-  command = "npm run build"
+  command = "echo 'build disabled'"
+  publish = "public"
 
-[build.environment]
-  NODE_VERSION = "18"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[context.production.environment]
+  CI = "false"
