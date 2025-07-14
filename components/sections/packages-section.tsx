@@ -177,15 +177,14 @@ export function PackagesSection({ onStartWizard }: PackagesSectionProps) {
               <Phone className="w-5 h-5 mr-2" />
               Parler à Sophie : +33 1 XX XX XX XX
             </Button>
-            <Button 
-              onClick={onStartWizard}
-              size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold"
-            >
-              Construire mon séjour
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+           <Button 
+  onClick={onStartWizard}
+  size="lg"
+  className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold"
+>
+  Construire mon séjour
+  <ArrowRight className="w-5 h-5 ml-2" />
+</Button>
           </div>
         </div>
       </div>
