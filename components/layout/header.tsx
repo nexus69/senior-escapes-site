@@ -35,7 +35,7 @@ export function Header({ onStartWizard }: HeaderProps) {
                   <span className="text-white font-bold text-lg">SE</span>
                 </div>
                 <div className="ml-3">
-                  <div className="text-lg font-bold text-gray-900">Senior Escapes</div>
+                  <div className="text-lg font-bold text-gray-900"> Vitanéo</div>
                   <div className="text-xs text-blue-600 font-medium">TUNISIE</div>
                 </div>
               </a>
