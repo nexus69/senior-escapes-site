@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Senior Escapes Tunisie - Séjours Premium pour Retraités Actifs',
+  title: 'Vitanéo - Séjours Premium pour Retraités Actifs',
   description: 'Découvrez une nouvelle façon de vivre votre retraite en Tunisie. Séjours longs durée avec accompagnement personnalisé, communauté chaleureuse et sérénité garantie.',
   keywords: 'retraite tunisie, séjour senior, résidence retraités, accompagnement senior, communauté retraités',
 };
