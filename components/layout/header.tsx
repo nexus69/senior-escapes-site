@@ -32,7 +32,7 @@ export function Header({ onStartWizard }: HeaderProps) {
                 className="flex items-center hover:opacity-80 transition-opacity duration-200"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">SE</span>
+                  <span className="text-white font-bold text-lg">V❊</span>
                 </div>
                 <div className="ml-3">
                   <div className="text-lg font-bold text-gray-900"> Vitanéo</div>
