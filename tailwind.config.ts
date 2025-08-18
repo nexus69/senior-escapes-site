@@ -7,9 +7,6 @@ const config: Config = {
     {
       pattern: /(bg|text|border|from|to|via)-(blue|orange|purple|red|indigo|green|yellow|emerald|gray)-(50|100|200|300|400|500|600|700|800|900)/,
     },
-    {
-      pattern: /hover:(bg|text|border|from|to|via)-(blue|orange|purple|red|indigo|green|yellow|emerald|gray)-(50|100|200|300|400|500|600|700|800|900)/,
-    },
   ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
