@@ -5,8 +5,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Suppression des configurations problématiques pour le développement
-  // basePath et assetPrefix sont uniquement pour la production
+  // Configuration optimisée pour Netlify
+  distDir: 'out',
+  // Désactiver les optimisations qui peuvent causer des problèmes sur Netlify
+  swcMinify: true,
+  experimental: {
+    // Optimisations pour les sites statiques
+    optimizeCss: true,
+  }
 };
 
 module.exports = nextConfig;
