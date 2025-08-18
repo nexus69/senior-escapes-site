@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://nexus69.github.io/senior-escapes-site",
-  "homepage": "https://nexus69.github.io/senior-escapes-site",
 "scripts": {
   "dev": "next dev",
   "build": "next build && next export",

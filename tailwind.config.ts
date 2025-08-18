@@ -2,6 +2,33 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   darkMode: ['class'],
+  safelist: [
+    // Dynamic color classes used in components
+    {
+      pattern: /bg-(blue|orange|purple)-(50|100|500|600|700|800)/,
+    },
+    {
+      pattern: /text-(blue|orange|purple)-(50|100|600|700|800|900)/,
+    },
+    {
+      pattern: /border-(blue|orange|purple)-(200|300|500)/,
+    },
+    {
+      pattern: /hover:bg-(blue|orange|purple)-(50|700|800)/,
+    },
+    {
+      pattern: /hover:from-(blue|orange|purple)-(600|700)/,
+    },
+    {
+      pattern: /hover:to-(blue|orange|purple)-(700|800)/,
+    },
+    {
+      pattern: /from-(blue|orange|purple)-(400|500|600)/,
+    },
+    {
+      pattern: /to-(blue|orange|purple|red|indigo)-(500|600|700)/,
+    },
+  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
