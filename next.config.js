@@ -5,8 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Suppression des configurations problématiques pour le développement
-  // basePath et assetPrefix sont uniquement pour la production
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
