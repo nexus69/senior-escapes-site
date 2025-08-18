@@ -67,7 +67,7 @@
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
     "build": "next build",
-    "export": "next export",
+    "build": "rm -rf .next out && next build && next export",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
   },
