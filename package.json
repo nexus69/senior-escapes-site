@@ -7,7 +7,7 @@
   "homepage": "https://nexus69.github.io/senior-escapes-site",
 "scripts": {
   "dev": "next dev",
-  "build": "next build && next export",
+  "build": "next build",
   "start": "next start",
   "lint": "next lint"
 },
