@@ -12,11 +12,11 @@ import {
   Users, 
   Heart,
   Palette,
-  
-}Utensils,
+  Utensils,
   Music,
   Camera,
-  Waves,
+  
+}Waves,
   Mountain,
   BookOpen,
   ArrowRight,
