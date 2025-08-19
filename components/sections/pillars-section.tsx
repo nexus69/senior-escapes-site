@@ -85,15 +85,15 @@ export function PillarsSection() {
             const Icon = pillar.icon;
             
             return (
-              <Card key={index} className="relative p-12 lg:p-16 bg-white/95 backdrop-blur-sm border border-slate-200/50 hover:border-slate-300/60 hover:shadow-xl transition-all duration-700 group shadow-lg">
+              <Card key={index} className="relative p-12 lg:p-16 bg-white border-2 border-slate-300 hover:border-slate-400 hover:shadow-xl transition-all duration-700 group shadow-lg">
                   {/* Pillar Number - Style Palace */}
-                  <div className="absolute top-8 left-8 w-12 h-12 border border-slate-300/30 rounded-full flex items-center justify-center bg-white/50 backdrop-blur-sm">
+                  <div className="absolute top-8 left-8 w-12 h-12 border-2 border-slate-400 rounded-full flex items-center justify-center bg-white">
                     <span className="text-slate-600 font-light text-lg">{pillar.number}</span>
                   </div>
 
                   {/* Icon - Très discret style palace */}
                   <div className="w-8 h-8 mb-8 mx-auto lg:mx-0">
-                    <Icon className="w-8 h-8 text-slate-400 group-hover:text-slate-600 transition-colors duration-500" />
+                    <Icon className="w-8 h-8 text-slate-500 group-hover:text-slate-700 transition-colors duration-500" />
                   </div>
 
                   {/* Content */}
@@ -102,7 +102,7 @@ export function PillarsSection() {
                       <h3 className="text-2xl lg:text-3xl font-light text-slate-800 mb-3 leading-tight tracking-wide">
                         {pillar.title}
                       </h3>
-                      <p className="text-sm font-medium text-slate-500 mb-6 tracking-widest uppercase">
+                      <p className="text-sm font-medium text-slate-600 mb-6 tracking-widest uppercase">
                         {pillar.subtitle}
                       </p>
                       <p className="text-slate-600 leading-relaxed font-light text-base lg:text-lg">
@@ -114,7 +114,7 @@ export function PillarsSection() {
                     <div className="space-y-4">
                       {pillar.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-start space-x-4 justify-center lg:justify-start">
-                          <div className="w-1 h-1 bg-slate-400 rounded-full mt-3 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-slate-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-slate-700 text-sm lg:text-base leading-relaxed font-light">
                             {feature}
                           </span>
@@ -123,7 +123,7 @@ export function PillarsSection() {
                     </div>
 
                     {/* Stats */}
-                    <div className="pt-6 border-t border-slate-200/30">
+                    <div className="pt-6 border-t border-slate-300">
                       <div className="text-slate-600 font-light text-sm tracking-wide">
                         {pillar.stats}
                       </div>
@@ -135,10 +135,10 @@ export function PillarsSection() {
         </div>
 
         {/* Horizontal Separator */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300/40 to-transparent mb-16"></div>
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent mb-16"></div>
 
         {/* Trust Indicators */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-none p-12 border-t border-b border-slate-200/30 mb-16">
+        <div className="bg-white border-2 border-slate-300 rounded-lg p-12 mb-16">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-12 text-center">
             <div className="space-y-2">
               <div className="text-4xl font-light text-slate-800 tracking-wide">500+</div>
