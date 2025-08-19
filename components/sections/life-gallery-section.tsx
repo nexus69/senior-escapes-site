@@ -27,9 +27,9 @@ export function LifeGallerySection() {
   const categories = [
     {
       id: 'logement',
-      label: 'Hôtels Partenaires d\'Exception',
-      icon: Palmtree,
-      description: 'Suites d\'exception et résidences de prestige dans nos hôtels partenaires 4★ et 5★ sélectionnés pour leur raffinement méditerranéen',
+      label: 'Résidences d\'Exception',
+      icon: Shield,
+      description: 'Suites d\'exception dans nos résidences partenaires sélectionnées pour leur raffinement architectural et leur service de conciergerie premium',
       images: [
         {
           url: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -50,9 +50,9 @@ export function LifeGallerySection() {
     },
     {
       id: 'activites',
-      label: 'Expériences Culturelles d\'Exception',
-      icon: Heart,
-      description: 'Expériences privées et raffinées orchestrées par notre conciergerie pour découvrir l\'authenticité tunisienne',
+      label: 'Art de Vivre Méditerranéen',
+      icon: Star,
+      description: 'Expériences culturelles privées orchestrées par notre conciergerie pour une immersion authentique dans l\'art de vivre tunisien',
       images: [
         {
           url: 'https://images.pexels.com/photos/8174441/pexels-photo-8174441.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -73,9 +73,9 @@ export function LifeGallerySection() {
     },
     {
       id: 'communaute',
-      label: 'Communauté Résidentielle Exclusive',
-      icon: Users,
-      description: 'Communauté sélectionnée de résidents européens partageant l\'art de vivre méditerranéen dans nos hôtels partenaires',
+      label: 'Communauté Privilégiée',
+      icon: Heart,
+      description: 'Communauté sélectionnée de résidents européens partageant les mêmes valeurs d\'excellence et de raffinement',
       images: [
         {
           url: 'https://images.pexels.com/photos/8170256/pexels-photo-8170256.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -96,9 +96,9 @@ export function LifeGallerySection() {
     },
     {
       id: 'gastronomie',
-      label: 'Gastronomie d\'Exception',
+      label: 'Excellence Culinaire',
       icon: Utensils,
-      description: 'Art culinaire méditerranéen dans les restaurants étoilés et chefs privés de nos hôtels partenaires',
+      description: 'Art culinaire méditerranéen avec chefs privés et accès privilégié aux meilleures tables de la région',
       images: [
         {
           url: 'https://images.pexels.com/photos/5863647/pexels-photo-5863647.jpeg?auto=compress&cs=tinysrgb&w=1200',
@@ -158,32 +158,35 @@ export function LifeGallerySection() {
     <section id="vie-sur-place" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full mb-6">
-            <Camera className="w-4 h-4 mr-2 text-orange-600" />
-            <span className="text-orange-700 font-medium">Découvrez votre quotidien</span>
+          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-full mb-8 shadow-sm">
+            <Camera className="w-4 h-4 mr-2 text-slate-600" />
+            <span className="text-slate-700 font-medium tracking-wide">Découvrez votre quotidien</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">La vie sur place</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Plongez dans l'atmosphère unique de nos résidences et découvrez le cadre exceptionnel qui vous attend en Tunisie.
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-slate-800 mb-6 leading-tight">
+            L'Art de Vivre
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-blue-600 to-slate-700 font-normal mt-2">Méditerranéen</span>
+          </h2>
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
+            Découvrez l'atmosphère raffinée de nos résidences partenaires et l'excellence de nos services de conciergerie.
           </p>
         </div>
 
         <Tabs defaultValue="logement" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 h-auto p-1 bg-gray-100 rounded-xl mb-12">
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 h-auto p-2 bg-slate-50 border border-slate-200 rounded-xl mb-16">
             {categories.map((category) => {
               const Icon = category.icon;
               return (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="flex flex-col items-center p-4 space-y-2 rounded-lg transition-all duration-300
-                    cursor-pointer text-gray-500
-                    hover:text-[#2663ec]
-                    data-[state=active]:text-[#2663ec]
-                    data-[state=active]:bg-white data-[state=active]:shadow-md"
+                  className="flex flex-col items-center p-6 space-y-3 rounded-lg transition-all duration-500
+                    cursor-pointer text-slate-500 font-light
+                    hover:text-slate-700
+                    data-[state=active]:text-slate-800
+                    data-[state=active]:bg-white data-[state=active]:shadow-lg data-[state=active]:border data-[state=active]:border-slate-200"
                 >
-                  <Icon className="w-5 h-5 text-current" />
-                  <span className="font-medium text-sm">{category.label}</span>
+                  <Icon className="w-6 h-6 text-current" />
+                  <span className="font-light text-sm tracking-wide text-center leading-tight">{category.label}</span>
                 </TabsTrigger>
               );
             })}
@@ -192,26 +195,26 @@ export function LifeGallerySection() {
           {categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <Card className="p-8 bg-blue-50 border-blue-200 border-2">
+                <Card className="p-12 bg-white border-2 border-slate-200 shadow-lg">
                   <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-[#2663ec] rounded-2xl flex items-center justify-center mx-auto">
-                      <category.icon className="w-8 h-8 text-white" />
+                    <div className="w-20 h-20 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center mx-auto border border-slate-300">
+                      <category.icon className="w-8 h-8 text-slate-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{category.label}</h3>
-                      <p className="text-gray-700 leading-relaxed">{category.description}</p>
+                      <h3 className="text-2xl font-light text-slate-800 mb-4 tracking-wide">{category.label}</h3>
+                      <p className="text-slate-600 leading-relaxed font-light">{category.description}</p>
                     </div>
                   </div>
                 </Card>
 
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-gray-900">Galerie photos</h3>
-                    <Badge className="bg-orange-100 text-orange-700 px-3 py-1">{category.images.length} photos</Badge>
+                    <h3 className="text-2xl font-light text-slate-800 tracking-wide">Galerie</h3>
+                    <Badge className="bg-slate-100 text-slate-700 px-4 py-2 font-light border border-slate-200">{category.images.length} images</Badge>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {category.images.map((image, index) => (
-                      <Card key={index} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer">
+                      <Card key={index} className="overflow-hidden border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group cursor-pointer">
                         <div 
                           className="relative" 
                           onClick={() => setSelectedImage(image.url)}
@@ -233,8 +236,8 @@ export function LifeGallerySection() {
                           </div>
                         </div>
                         <div className="p-6 space-y-3">
-                          <h4 className="text-lg font-bold text-gray-900">{image.title}</h4>
-                          <p className="text-gray-600 text-sm">{image.description}</p>
+                          <h4 className="text-lg font-medium text-slate-800 leading-tight">{image.title}</h4>
+                          <p className="text-slate-600 text-sm leading-relaxed font-light">{image.description}</p>
                         </div>
                       </Card>
                     ))}
@@ -247,18 +250,19 @@ export function LifeGallerySection() {
 
         <div className="mt-20">
           <Separator className="mb-12" />
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center text-white">
+          <div className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-16 text-center text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-slate-600/10"></div>
             <div className="max-w-4xl mx-auto space-y-8">
-              <h3 className="text-3xl lg:text-4xl font-bold">Témoignages authentiques</h3>
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Écoutez les témoignages sincères de nos résidents qui partagent leur expérience de vie quotidienne dans nos résidences tunisiennes.
+              <h3 className="text-3xl lg:text-4xl font-light tracking-wide">Témoignages Authentiques</h3>
+              <p className="text-xl text-slate-200 leading-relaxed font-light">
+                Découvrez les témoignages sincères de nos résidents qui partagent leur expérience de l'art de vivre méditerranéen.
               </p>
               <Button
                 size="lg"
-                className="bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 border-0 px-8 py-4 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-white text-slate-800 hover:bg-slate-50 hover:text-slate-900 border-0 px-10 py-4 font-light text-lg tracking-wide transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <Play className="w-5 h-5 mr-2" />
-                Voir les témoignages vidéo
+                Découvrir les Témoignages
               </Button>
             </div>
           </div>
