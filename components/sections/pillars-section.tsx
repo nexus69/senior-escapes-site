@@ -50,64 +50,24 @@ export function PillarsSection() {
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      blue: {
-        bg: "bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100",
-        iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
-        iconColor: "text-white",
-        titleColor: "text-blue-900",
-        border: "border-blue-200",
-        accent: "text-blue-600",
-        highlight: "bg-blue-500",
-        button: "bg-blue-600 hover:bg-blue-700"
-      },
-      orange: {
-        bg: "bg-gradient-to-br from-orange-50 via-orange-100 to-red-100",
-        iconBg: "bg-gradient-to-br from-orange-500 to-red-500",
-        iconColor: "text-white",
-        titleColor: "text-orange-900",
-        border: "border-orange-200",
-        accent: "text-orange-600",
-        highlight: "bg-orange-500",
-        button: "bg-orange-600 hover:bg-orange-700"
-      },
-      green: {
-        bg: "bg-gradient-to-br from-green-50 via-green-100 to-emerald-100",
-        iconBg: "bg-gradient-to-br from-green-500 to-emerald-600",
-        iconColor: "text-white",
-        titleColor: "text-green-900",
-        border: "border-green-200",
-        accent: "text-green-600",
-        highlight: "bg-green-500",
-        button: "bg-green-600 hover:bg-green-700"
-      }
-    };
-    return colorMap[color as keyof typeof colorMap];
-  };
 
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-16 sm:py-24 bg-white relative">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header - Enhanced */}
         <div className="text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-orange-100 rounded-full mb-8 shadow-lg">
-            <Star className="w-5 h-5 mr-3 text-blue-600" />
-            <span className="text-blue-700 font-bold text-base sm:text-lg">Nos 3 piliers fondamentaux</span>
+          <div className="inline-flex items-center px-6 py-3 bg-white/95 backdrop-blur-sm rounded-full border border-slate-200 mb-8 shadow-lg">
+            <Star className="w-5 h-5 mr-3 text-slate-600" />
+            <span className="text-slate-700 font-light tracking-wide text-base sm:text-lg">Nos 3 piliers fondamentaux</span>
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
             Pourquoi choisir 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 block sm:inline"> Vitanéo</span> ?
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-900 font-light tracking-wide block sm:inline"> Vitanéo</span> ?
           </h2>
           
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4 font-light">
+          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-4 font-light tracking-wide">
             Nous avons conçu une approche unique qui place l'humain au centre de chaque séjour, 
             pour une expérience de retraite véritablement enrichissante.
           </p>
@@ -116,32 +76,31 @@ export function PillarsSection() {
         {/* Enhanced Pillars Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 mb-16">
           {pillars.map((pillar, index) => {
-            const colors = getColorClasses(pillar.color);
             const Icon = pillar.icon;
             
             return (
               <Card 
                 key={index} 
-                className={`relative p-8 sm:p-10 ${colors.bg} ${colors.border} border-2 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group overflow-hidden`}
+                className="relative p-8 sm:p-10 bg-white border-2 border-slate-300 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group overflow-hidden"
               >
                 {/* Highlight Badge */}
-                <div className={`absolute top-4 right-4 ${colors.highlight} text-white px-3 py-1 rounded-full text-xs font-bold`}>
+                <div className="absolute top-4 right-4 bg-slate-800 text-white px-3 py-1 rounded-full text-xs font-light tracking-wide">
                   {pillar.highlight}
                 </div>
 
                 {/* Icon with enhanced styling */}
-                <div className={`w-20 h-20 sm:w-24 sm:h-24 ${colors.iconBg} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 mx-auto sm:mx-0 shadow-xl`}>
-                  <Icon className={`w-10 h-10 sm:w-12 sm:h-12 ${colors.iconColor}`} />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 mx-auto sm:mx-0 shadow-xl">
+                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                 </div>
 
                 {/* Content */}
                 <div className="space-y-6 text-center sm:text-left">
                   <div>
-                    <h3 className={`text-2xl sm:text-3xl font-bold ${colors.titleColor} group-hover:scale-105 transition-transform duration-300 mb-4`}>
+                    <h3 className="text-2xl sm:text-3xl font-light tracking-wide text-slate-900 group-hover:scale-105 transition-transform duration-300 mb-4">
                       {pillar.title}
                     </h3>
                     
-                    <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-medium">
+                    <p className="text-slate-700 leading-relaxed text-base sm:text-lg font-light tracking-wide">
                       {pillar.description}
                     </p>
                   </div>
@@ -150,10 +109,10 @@ export function PillarsSection() {
                   <div className="space-y-4">
                     {pillar.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start space-x-4 group/item">
-                        <div className={`w-6 h-6 ${colors.iconBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-200 shadow-md`}>
+                        <div className="w-6 h-6 bg-slate-800 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-200 shadow-md">
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-gray-800 font-semibold text-sm sm:text-base leading-relaxed group-hover/item:text-gray-900 transition-colors duration-200">
+                        <span className="text-slate-800 font-light tracking-wide text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors duration-200">
                           {feature}
                         </span>
                       </div>
@@ -161,9 +120,9 @@ export function PillarsSection() {
                   </div>
 
                   {/* Stats */}
-                  <div className={`inline-flex items-center px-4 py-2 ${colors.bg} rounded-full border ${colors.border}`}>
-                    <Star className={`w-4 h-4 ${colors.accent} mr-2`} />
-                    <span className={`${colors.accent} font-bold text-sm`}>{pillar.stats}</span>
+                  <div className="inline-flex items-center px-4 py-2 bg-slate-50 rounded-full border border-slate-200">
+                    <Star className="w-4 h-4 text-slate-600 mr-2" />
+                    <span className="text-slate-800 font-light tracking-wide text-sm">{pillar.stats}</span>
                   </div>
                 </div>
               </Card>
@@ -172,23 +131,23 @@ export function PillarsSection() {
         </div>
 
         {/* Enhanced Trust Indicators */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-slate-300">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">500+</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">Résidents satisfaits</div>
+              <div className="text-4xl sm:text-5xl font-light tracking-wide text-slate-800">500+</div>
+              <div className="text-slate-600 text-sm sm:text-base font-light tracking-wide">Résidents satisfaits</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">5 ans</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">D'expérience en Tunisie</div>
+              <div className="text-4xl sm:text-5xl font-light tracking-wide text-slate-800">5 ans</div>
+              <div className="text-slate-600 text-sm sm:text-base font-light tracking-wide">D'expérience en Tunisie</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">98%</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">Taux de satisfaction</div>
+              <div className="text-4xl sm:text-5xl font-light tracking-wide text-slate-800">98%</div>
+              <div className="text-slate-600 text-sm sm:text-base font-light tracking-wide">Taux de satisfaction</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">24/7</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">Assistance disponible</div>
+              <div className="text-4xl sm:text-5xl font-light tracking-wide text-slate-800">24/7</div>
+              <div className="text-slate-600 text-sm sm:text-base font-light tracking-wide">Assistance disponible</div>
             </div>
           </div>
         </div>
@@ -197,7 +156,7 @@ export function PillarsSection() {
         <div className="text-center mt-16">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 hover:from-blue-700 hover:via-purple-700 hover:to-orange-600 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300"
+            className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-slate-800 text-white px-12 py-6 text-xl font-light tracking-wide shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300"
           >
             Découvrir nos formules
             <ArrowRight className="w-6 h-6 ml-3" />
