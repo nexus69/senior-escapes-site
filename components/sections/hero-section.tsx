@@ -13,7 +13,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
   const [videoPlaying, setVideoPlaying] = useState(false);
 
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 to-white">
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
@@ -22,7 +22,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
             alt="Vue sur la Méditerranée en Tunisie"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/40 to-blue-600/20"></div>
         </div>
       </div>
 
@@ -37,44 +37,44 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
           {/* Left Column - Text Content */}
           <div className="lg:col-span-7 text-white space-y-8">
             <div className="space-y-6">
-              <div className="inline-flex items-center px-6 py-3 bg-white/95 backdrop-blur-sm rounded-full border border-slate-200 mb-8 shadow-lg">
-                <MapPin className="w-5 h-5 mr-3 text-slate-600" />
-                <span className="text-slate-700 font-light tracking-wide text-base sm:text-lg">Votre nouvelle vie sous le soleil tunisien</span>
+              <div className="inline-flex items-center px-6 py-3 bg-white/95 backdrop-blur-sm rounded-full border border-blue-200 mb-8 shadow-lg">
+                <MapPin className="w-5 h-5 mr-3 text-blue-600" />
+                <span className="text-blue-800 font-medium tracking-wide text-base sm:text-lg">Hammamet • Tunisie • Méditerranée</span>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-wide leading-tight">
-                Vivez votre retraite
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-900 font-light tracking-wide">
-                  en toute sérénité
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-tight">
+                <span className="block text-white mb-2">Vitanéo</span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl text-blue-100 font-light italic">
+                  L'art de vivre sa retraite en toute liberté
                 </span>
               </h1>
               
-              <p className="text-lg sm:text-xl text-slate-100 leading-relaxed max-w-2xl font-light tracking-wide">
-                Découvrez une expérience unique alliant climat méditerranéen, 
-                communauté chaleureuse et accompagnement personnalisé. 
-                Séjours de 1 à 6 mois pour retraités européens actifs.
+              <p className="text-xl sm:text-2xl text-blue-50 leading-relaxed max-w-3xl font-light">
+                Résidence temporaire de luxe face à la Méditerranée. 
+                L'élégance d'un resort 5 étoiles, la sérénité d'un foyer, 
+                l'authenticité de la Tunisie.
               </p>
             </div>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-8">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                  <Users className="w-6 h-6 text-slate-600" />
+                <div className="w-14 h-14 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-blue-200">
+                  <Users className="w-7 h-7 text-blue-600" />
                 </div>
                 <div>
-                  <div className="text-2xl font-light tracking-wide text-white">500+</div>
-                  <div className="text-slate-200 text-sm font-light tracking-wide">Résidents heureux</div>
+                  <div className="text-3xl font-light text-white">500+</div>
+                  <div className="text-blue-100 text-sm font-light">Résidents privilégiés</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                  <Shield className="w-6 h-6 text-slate-600" />
+                <div className="w-14 h-14 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg border border-blue-200">
+                  <Shield className="w-7 h-7 text-blue-600" />
                 </div>
                 <div>
-                  <div className="text-2xl font-light tracking-wide text-white">24/7</div>
-                  <div className="text-slate-200 text-sm font-light tracking-wide">Assistance francophone</div>
+                  <div className="text-3xl font-light text-white">24/7</div>
+                  <div className="text-blue-100 text-sm font-light">Conciergerie privée</div>
                 </div>
               </div>
             </div>
@@ -84,21 +84,21 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
               <Button
                 onClick={onStartWizard}
                 size="lg"
-                className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-slate-800 text-white px-8 py-4 text-lg font-light tracking-wide shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 border-0 flex-shrink-0"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-5 text-xl font-medium shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 border-0 flex-shrink-0 rounded-full"
               >
-                <span className="hidden sm:inline">Construire mon séjour sur mesure</span>
-                <span className="sm:hidden">Mon séjour sur mesure</span>
+                <span className="hidden sm:inline">Créer mon séjour d'exception</span>
+                <span className="sm:hidden">Mon séjour d'exception</span>
                 <ArrowRight className="w-5 h-5 ml-3" />
               </Button>
               
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg font-light tracking-wide backdrop-blur-sm bg-white/10 transition-all duration-300 flex-shrink-0"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-10 py-5 text-xl font-medium backdrop-blur-sm bg-white/10 transition-all duration-300 flex-shrink-0 rounded-full"
               >
                 <Play className="w-5 h-5 mr-2" />
-                <span className="hidden sm:inline">Découvrir en vidéo</span>
-                <span className="sm:hidden">Voir la vidéo</span>
+                <span className="hidden sm:inline">Découvrir Vitanéo</span>
+                <span className="sm:hidden">Découvrir</span>
               </Button>
             </div>
           </div>
@@ -110,38 +110,39 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
               <WeatherWidget />
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-200">
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-blue-100">
               <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <Users className="w-7 h-7 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-light tracking-wide text-slate-900 mb-3">Accompagnement Personnalisé</h3>
-                  <p className="text-base text-slate-700 leading-relaxed font-light tracking-wide">Une équipe dédiée vous accompagne avant, pendant et après votre séjour pour une expérience sur mesure.</p>
+                  <h3 className="text-2xl font-medium text-blue-900 mb-3">Conciergerie Privée</h3>
+                  <p className="text-lg text-blue-700 leading-relaxed font-light">Une équipe dédiée anticipe vos besoins pour une expérience résidentielle sans égal.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-blue-100">
+              <div className="flex items-start space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Heart className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-medium text-blue-900 mb-3">Communauté Privilégiée</h3>
+                  <p className="text-lg text-blue-700 leading-relaxed font-light">Rejoignez une communauté raffinée de résidents européens partageant l'art de vivre méditerranéen.</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-200">
+            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-blue-100">
               <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-light tracking-wide text-slate-900 mb-3">Communauté Chaleureuse</h3>
-                  <p className="text-base text-slate-700 leading-relaxed font-light tracking-wide">Rejoignez une communauté de retraités européens partageant vos valeurs et vos envies de découverte.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-200">
-              <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
                   <Shield className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-light tracking-wide text-slate-900 mb-3">Sérénité Garantie</h3>
-                  <p className="text-base text-slate-700 leading-relaxed font-light tracking-wide">Logements sécurisés, assistance médicale et services conciergerie pour votre tranquillité d'esprit.</p>
+                  <h3 className="text-xl font-light tracking-wide text-blue-900 mb-3">Sérénité Absolue</h3>
+                  <p className="text-base text-blue-800 leading-relaxed font-light tracking-wide">Sécurité hôtelière, assistance médicale coordonnée et tranquillité d'esprit pour vous et vos proches.</p>
                 </div>
               </div>
             </div>
