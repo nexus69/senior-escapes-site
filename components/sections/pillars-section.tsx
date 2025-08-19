@@ -54,11 +54,11 @@ export function PillarsSection() {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative">
       {/* Subtle Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-blue-300 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-amber-300 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-3">
+        <div className="absolute top-32 right-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-32 w-96 h-96 bg-amber-200 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -80,49 +80,48 @@ export function PillarsSection() {
         </div>
 
         {/* Pillars Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mb-20">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
-            const isCenter = index === 1;
             
             return (
               <div key={index} className="relative">
-                {/* Separator Line - Only between pillars */}
+                {/* Vertical Separator Lines */}
                 {index < pillars.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-px h-32 bg-gradient-to-b from-transparent via-slate-300 to-transparent transform -translate-y-1/2 z-10"></div>
+                  <div className="hidden lg:block absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-slate-300/40 to-transparent z-10"></div>
                 )}
                 
-                <Card className={`relative p-8 bg-white/95 backdrop-blur-sm border border-slate-200/40 hover:border-slate-300/50 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group ${isCenter ? 'lg:scale-105 lg:shadow-lg' : ''}`}>
-                  {/* Pillar Number */}
-                  <div className="absolute top-6 right-6 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
-                    <span className="text-slate-600 text-sm font-medium">{pillar.number}</span>
+                <div className="relative p-12 lg:p-16 bg-white/95 backdrop-blur-sm border-0 hover:bg-white transition-all duration-700 group">
+                  {/* Pillar Number - Style Palace */}
+                  <div className="absolute top-8 left-8 w-12 h-12 border border-slate-300/30 rounded-full flex items-center justify-center bg-white/50 backdrop-blur-sm">
+                    <span className="text-slate-600 font-light text-lg">{pillar.number}</span>
                   </div>
 
-                  {/* Icon - Plus discret */}
-                  <div className={`w-12 h-12 bg-${pillar.color}-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-${pillar.color}-100 transition-colors duration-300`}>
-                    <Icon className={`w-6 h-6 text-${pillar.color}-600`} />
+                  {/* Icon - Très discret style palace */}
+                  <div className="w-8 h-8 mb-8 mx-auto lg:mx-0">
+                    <Icon className="w-8 h-8 text-slate-400 group-hover:text-slate-600 transition-colors duration-500" />
                   </div>
 
                   {/* Content */}
-                  <div className="space-y-6">
+                  <div className="space-y-6 text-center lg:text-left">
                     <div>
-                      <h3 className="text-2xl font-light text-slate-800 mb-2 leading-tight">
+                      <h3 className="text-2xl lg:text-3xl font-light text-slate-800 mb-3 leading-tight tracking-wide">
                         {pillar.title}
                       </h3>
-                      <p className={`text-sm font-medium text-${pillar.color}-600 mb-4 tracking-wide uppercase`}>
+                      <p className="text-sm font-medium text-slate-500 mb-6 tracking-widest uppercase">
                         {pillar.subtitle}
                       </p>
-                      <p className="text-slate-600 leading-relaxed font-light">
+                      <p className="text-slate-600 leading-relaxed font-light text-base lg:text-lg">
                         {pillar.description}
                       </p>
                     </div>
 
                     {/* Features List */}
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {pillar.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-start space-x-3">
-                          <div className={`w-1.5 h-1.5 bg-${pillar.color}-500 rounded-full mt-2.5 flex-shrink-0`}></div>
-                          <span className="text-slate-700 text-sm leading-relaxed">
+                        <div key={featureIndex} className="flex items-start space-x-4 justify-center lg:justify-start">
+                          <div className="w-1 h-1 bg-slate-400 rounded-full mt-3 flex-shrink-0"></div>
+                          <span className="text-slate-700 text-sm lg:text-base leading-relaxed font-light">
                             {feature}
                           </span>
                         </div>
@@ -130,36 +129,39 @@ export function PillarsSection() {
                     </div>
 
                     {/* Stats */}
-                    <div className="pt-4 border-t border-slate-200/50">
-                      <div className={`text-${pillar.color}-600 font-medium text-sm`}>
+                    <div className="pt-6 border-t border-slate-200/30">
+                      <div className="text-slate-600 font-light text-sm tracking-wide">
                         {pillar.stats}
                       </div>
                     </div>
                   </div>
-                </Card>
+                </div>
               </div>
             );
           })}
         </div>
 
+        {/* Horizontal Separator */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300/40 to-transparent mb-16"></div>
+
         {/* Trust Indicators */}
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-slate-200/40 mb-16">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+        <div className="bg-white/90 backdrop-blur-sm rounded-none p-12 border-t border-b border-slate-200/30 mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-12 text-center">
             <div className="space-y-2">
-              <div className="text-3xl font-light text-slate-700">500+</div>
-              <div className="text-slate-600 text-sm font-light">Résidents Accueillis</div>
+              <div className="text-4xl font-light text-slate-800 tracking-wide">500+</div>
+              <div className="text-slate-600 text-sm font-light tracking-wide">Résidents Accueillis</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-light text-slate-700">5★</div>
-              <div className="text-slate-600 text-sm font-light">Hôtels Partenaires</div>
+              <div className="text-4xl font-light text-slate-800 tracking-wide">5★</div>
+              <div className="text-slate-600 text-sm font-light tracking-wide">Hôtels Partenaires</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-light text-slate-700">98%</div>
-              <div className="text-slate-600 text-sm font-light">Satisfaction Client</div>
+              <div className="text-4xl font-light text-slate-800 tracking-wide">98%</div>
+              <div className="text-slate-600 text-sm font-light tracking-wide">Satisfaction Client</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-light text-slate-700">24/7</div>
-              <div className="text-slate-600 text-sm font-light">Assistance Premium</div>
+              <div className="text-4xl font-light text-slate-800 tracking-wide">24/7</div>
+              <div className="text-slate-600 text-sm font-light tracking-wide">Assistance Premium</div>
             </div>
           </div>
         </div>
@@ -168,7 +170,7 @@ export function PillarsSection() {
         <div className="text-center">
           <Button 
             size="lg" 
-            className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+            className="bg-slate-800 hover:bg-slate-900 text-white px-12 py-4 font-light text-lg tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 rounded-none"
           >
             Découvrir nos Expériences
             <ArrowRight className="w-5 h-5 ml-2" />
