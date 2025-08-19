@@ -27,93 +27,93 @@ export function LifeGallerySection() {
   const categories = [
     {
       id: 'logement',
-      label: 'Nos Résidences & Hôtels Partenaires',
+      label: 'Hôtels Partenaires d\'Exception',
       icon: Palmtree,
-      description: 'Résidences hôtelières d\'exception et suites de luxe dans nos hôtels partenaires 4★ et 5★',
+      description: 'Suites d\'exception et résidences de prestige dans nos hôtels partenaires 4★ et 5★ sélectionnés pour leur raffinement méditerranéen',
       images: [
         {
           url: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Suite Premium avec vue mer panoramique',
-          description: 'Suite de 45m² dans hôtel partenaire 5★ avec salon privé, terrasse panoramique et vue imprenable sur la Méditerranée'
+          title: 'Suite Prestige Vue Mer - Hôtel Partenaire 5★',
+          description: 'Suite de 55m² avec salon privé, terrasse panoramique et vue imprenable sur la baie d\'Hammamet. Services de conciergerie inclus.'
         },
         {
           url: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Suite Excellence avec salon privé',
-          description: 'Suite d\'exception de 65m² avec salon séparé, décoration raffinée et services hôteliers 5★ inclus'
+          title: 'Suite Excellence - Resort Partenaire Premium',
+          description: 'Suite d\'exception de 75m² avec salon séparé, décoration sur mesure et accès privilégié aux services spa & wellness du resort.'
         },
         {
           url: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Chambre Master avec terrasse privée',
-          description: 'Chambre master avec lit king-size, dressing sur mesure et accès direct à terrasse privée avec vue jardin'
+          title: 'Suite Master - Hôtel Boutique Partenaire',
+          description: 'Suite master 45m² avec lit king-size, dressing personnalisé et terrasse privée donnant sur jardins méditerranéens du resort.'
         }
       ]
     },
     {
       id: 'activites',
-      label: 'Nos Expériences Culturelles',
+      label: 'Expériences Culturelles d\'Exception',
       icon: Heart,
-      description: 'Expériences authentiques et raffinées pour découvrir l\'art de vivre méditerranéen',
+      description: 'Expériences privées et raffinées orchestrées par notre conciergerie pour découvrir l\'authenticité tunisienne',
       images: [
         {
           url: 'https://images.pexels.com/photos/8174441/pexels-photo-8174441.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Bien-être premium face à la Méditerranée',
-          description: 'Séances privées de yoga, méditation et tai-chi sur terrasses panoramiques de nos hôtels partenaires'
+          title: 'Wellness Premium dans nos Resorts Partenaires',
+          description: 'Séances privées de yoga, méditation et soins spa dans les espaces wellness exclusifs de nos hôtels partenaires 5★'
         },
         {
           url: 'https://images.pexels.com/photos/3771120/pexels-photo-3771120.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Ateliers d\'art avec maîtres artisans',
-          description: 'Cours privés de peinture, poterie et calligraphie arabe avec maîtres artisans tunisiens renommés'
+          title: 'Ateliers Privés avec Maîtres Artisans',
+          description: 'Expériences exclusives de peinture, poterie et calligraphie dans les ateliers privés de nos hôtels partenaires'
         },
         {
           url: 'https://images.pexels.com/photos/27622077/pexels-photo-27622077.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Excursions privées d\'exception',
-          description: 'Découvertes exclusives du patrimoine avec guides experts : Carthage, Sidi Bou Saïd, sites UNESCO'
+          title: 'Excursions VIP avec Guide Expert',
+          description: 'Découvertes privées du patrimoine tunisien avec guides historiens : Carthage, Sidi Bou Saïd, sites UNESCO classés'
         }
       ]
     },
     {
       id: 'communaute',
-      label: 'Notre Communauté Résidentielle',
+      label: 'Communauté Résidentielle Exclusive',
       icon: Users,
-      description: 'Une communauté raffinée de résidents européens partageant l\'art de vivre méditerranéen',
+      description: 'Communauté sélectionnée de résidents européens partageant l\'art de vivre méditerranéen dans nos hôtels partenaires',
       images: [
         {
           url: 'https://images.pexels.com/photos/8170256/pexels-photo-8170256.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Soirées raffinées en salon privé',
-          description: 'Moments d\'exception dans les salons privés de nos hôtels partenaires avec service de conciergerie'
+          title: 'Soirées Privées dans nos Hôtels Partenaires',
+          description: 'Événements exclusifs dans les salons privés et terrasses panoramiques de nos resorts partenaires 5★'
         },
         {
           url: 'https://images.pexels.com/photos/7938731/pexels-photo-7938731.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Cercles culturels d\'exception',
-          description: 'Rencontres privilégiées dans bibliothèques privées pour partager découvertes et expériences raffinées'
+          title: 'Cercles Culturels dans nos Resorts',
+          description: 'Rencontres raffinées dans les bibliothèques et salons privés de nos hôtels partenaires d\'exception'
         },
         {
           url: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Événements privés d\'exception',
-          description: 'Célébrations exclusives et événements sur mesure dans les espaces privatisés de nos hôtels partenaires'
+          title: 'Événements Exclusifs sur Mesure',
+          description: 'Célébrations privées orchestrées par notre conciergerie dans les espaces d\'exception de nos resorts partenaires'
         }
       ]
     },
     {
       id: 'gastronomie',
-      label: 'Notre Art Culinaire',
+      label: 'Gastronomie d\'Exception',
       icon: Utensils,
-      description: 'Expériences gastronomiques raffinées et cuisine méditerranéenne d\'exception',
+      description: 'Art culinaire méditerranéen dans les restaurants étoilés et chefs privés de nos hôtels partenaires',
       images: [
         {
           url: 'https://images.pexels.com/photos/5863647/pexels-photo-5863647.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Gastronomie méditerranéenne d\'exception',
-          description: 'Créations culinaires des chefs de nos hôtels partenaires avec produits premium et huiles d\'olive grand cru'
+          title: 'Chefs Étoilés de nos Hôtels Partenaires',
+          description: 'Créations gastronomiques exclusives avec produits premium et huiles d\'olive grand cru dans nos resorts 5★'
         },
         {
           url: 'https://images.pexels.com/photos/5358330/pexels-photo-5358330.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Restaurants gastronomiques avec vue mer',
-          description: 'Restaurants étoilés de nos hôtels partenaires avec terrasses panoramiques et service personnalisé'
+          title: 'Restaurants Panoramiques de nos Resorts',
+          description: 'Tables d\'exception avec vue mer dans les restaurants gastronomiques de nos hôtels partenaires sélectionnés'
         },
         {
           url: 'https://images.pexels.com/photos/5480243/pexels-photo-5480243.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Masterclass culinaires privées',
-          description: 'Cours privés avec chefs étoilés de nos hôtels partenaires : secrets de la haute gastronomie tunisienne'
+          title: 'Masterclass avec Chefs de nos Partenaires',
+          description: 'Cours privés exclusifs avec les chefs étoilés de nos hôtels partenaires : secrets de la gastronomie méditerranéenne'
         }
       ]
     }
