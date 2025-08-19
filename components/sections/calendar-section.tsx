@@ -346,12 +346,6 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
 
   const getActivityTypeInfo = (type: string) => {
     return activityTypes[type as keyof typeof activityTypes] || activityTypes.loisirs;
-  };
-
-  const currentDayActivities = weeklyProgram[selectedDay as keyof typeof weeklyProgram] || [];
-
-  return (
-    <section id="activites" className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
