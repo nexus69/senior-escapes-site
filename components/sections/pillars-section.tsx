@@ -80,18 +80,12 @@ export function PillarsSection() {
         </div>
 
         {/* Pillars Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             
             return (
-              <div key={index} className="relative">
-                {/* Vertical Separator Lines */}
-                {index < pillars.length - 1 && (
-                  <div className="hidden lg:block absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-slate-300/40 to-transparent z-10"></div>
-                )}
-                
-                <div className="relative p-12 lg:p-16 bg-white/95 backdrop-blur-sm border-0 hover:bg-white transition-all duration-700 group">
+              <Card key={index} className="relative p-12 lg:p-16 bg-white/95 backdrop-blur-sm border border-slate-200/50 hover:border-slate-300/60 hover:shadow-xl transition-all duration-700 group shadow-lg">
                   {/* Pillar Number - Style Palace */}
                   <div className="absolute top-8 left-8 w-12 h-12 border border-slate-300/30 rounded-full flex items-center justify-center bg-white/50 backdrop-blur-sm">
                     <span className="text-slate-600 font-light text-lg">{pillar.number}</span>
@@ -135,8 +129,7 @@ export function PillarsSection() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </Card>
             );
           })}
         </div>
