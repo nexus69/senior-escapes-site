@@ -27,93 +27,93 @@ export function LifeGallerySection() {
   const categories = [
     {
       id: 'logement',
-      label: 'Nos Logements',
+      label: 'Nos Résidences & Hôtels Partenaires',
       icon: Palmtree,
-      description: 'Des espaces de vie pensés pour votre confort et votre sérénité',
+      description: 'Résidences hôtelières d\'exception et suites de luxe dans nos hôtels partenaires 4★ et 5★',
       images: [
         {
           url: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Salon moderne avec vue mer panoramique',
-          description: 'Espace de vie lumineux de 35m² avec baie vitrée donnant sur la terrasse et vue imprenable sur la baie d\'Hammamet'
+          title: 'Suite Premium avec vue mer panoramique',
+          description: 'Suite de 45m² dans hôtel partenaire 5★ avec salon privé, terrasse panoramique et vue imprenable sur la Méditerranée'
         },
         {
           url: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Salon convivial et chaleureux',
-          description: 'Décoration soignée dans des tons apaisants, mobilier confortable et éclairage adapté pour la lecture'
+          title: 'Suite Excellence avec salon privé',
+          description: 'Suite d\'exception de 65m² avec salon séparé, décoration raffinée et services hôteliers 5★ inclus'
         },
         {
           url: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Chambre paisible avec vue jardin',
-          description: 'Espace nuit de 15m² avec lit king-size, dressing intégré et vue sur les jardins méditerranéens'
+          title: 'Chambre Master avec terrasse privée',
+          description: 'Chambre master avec lit king-size, dressing sur mesure et accès direct à terrasse privée avec vue jardin'
         }
       ]
     },
     {
       id: 'activites',
-      label: 'Nos Activités',
+      label: 'Nos Expériences Culturelles',
       icon: Heart,
-      description: 'Un programme riche et varié adapté à vos envies et votre rythme',
+      description: 'Expériences authentiques et raffinées pour découvrir l\'art de vivre méditerranéen',
       images: [
         {
           url: 'https://images.pexels.com/photos/8174441/pexels-photo-8174441.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Yoga et bien-être face à la mer',
-          description: 'Séances quotidiennes de yoga, méditation et tai-chi sur notre terrasse panoramique avec vue mer'
+          title: 'Bien-être premium face à la Méditerranée',
+          description: 'Séances privées de yoga, méditation et tai-chi sur terrasses panoramiques de nos hôtels partenaires'
         },
         {
           url: 'https://images.pexels.com/photos/3771120/pexels-photo-3771120.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Ateliers créatifs et artistiques',
-          description: 'Cours de peinture, poterie, calligraphie arabe animés par des artistes locaux expérimentés'
+          title: 'Ateliers d\'art avec maîtres artisans',
+          description: 'Cours privés de peinture, poterie et calligraphie arabe avec maîtres artisans tunisiens renommés'
         },
         {
           url: 'https://images.pexels.com/photos/27622077/pexels-photo-27622077.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Excursions culturelles guidées',
-          description: 'Découverte du patrimoine tunisien avec guide francophone : Carthage, Sidi Bou Saïd, Kairouan'
+          title: 'Excursions privées d\'exception',
+          description: 'Découvertes exclusives du patrimoine avec guides experts : Carthage, Sidi Bou Saïd, sites UNESCO'
         }
       ]
     },
     {
       id: 'communaute',
-      label: 'Notre Communauté',
+      label: 'Notre Communauté Résidentielle',
       icon: Users,
-      description: 'Une famille chaleureuse de retraités européens actifs',
+      description: 'Une communauté raffinée de résidents européens partageant l\'art de vivre méditerranéen',
       images: [
         {
           url: 'https://images.pexels.com/photos/8170256/pexels-photo-8170256.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Soirées conviviales et chaleureuses',
-          description: 'Moments de partage autour d\'un verre, jeux de société et discussions dans notre salon principal'
+          title: 'Soirées raffinées en salon privé',
+          description: 'Moments d\'exception dans les salons privés de nos hôtels partenaires avec service de conciergerie'
         },
         {
           url: 'https://images.pexels.com/photos/7938731/pexels-photo-7938731.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Clubs de lecture et échanges culturels',
-          description: 'Rencontres hebdomadaires pour partager lectures, expériences et découvertes culturelles'
+          title: 'Cercles culturels d\'exception',
+          description: 'Rencontres privilégiées dans bibliothèques privées pour partager découvertes et expériences raffinées'
         },
         {
           url: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Célébrations et événements spéciaux',
-          description: 'Fêtes traditionnelles, anniversaires et événements saisonniers dans une ambiance familiale'
+          title: 'Événements privés d\'exception',
+          description: 'Célébrations exclusives et événements sur mesure dans les espaces privatisés de nos hôtels partenaires'
         }
       ]
     },
     {
       id: 'gastronomie',
-      label: 'Notre Gastronomie',
+      label: 'Notre Art Culinaire',
       icon: Utensils,
-      description: 'Une cuisine méditerranéenne savoureuse et équilibrée',
+      description: 'Expériences gastronomiques raffinées et cuisine méditerranéenne d\'exception',
       images: [
         {
           url: 'https://images.pexels.com/photos/5863647/pexels-photo-5863647.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Cuisine méditerranéenne raffinée',
-          description: 'Plats savoureux préparés avec des produits locaux frais : poissons, légumes, huile d\'olive premium'
+          title: 'Gastronomie méditerranéenne d\'exception',
+          description: 'Créations culinaires des chefs de nos hôtels partenaires avec produits premium et huiles d\'olive grand cru'
         },
         {
           url: 'https://images.pexels.com/photos/5358330/pexels-photo-5358330.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Restaurant panoramique avec vue mer',
-          description: 'Salle de restaurant climatisée de 120 places avec baies vitrées et terrasse extérieure'
+          title: 'Restaurants gastronomiques avec vue mer',
+          description: 'Restaurants étoilés de nos hôtels partenaires avec terrasses panoramiques et service personnalisé'
         },
         {
           url: 'https://images.pexels.com/photos/5480243/pexels-photo-5480243.jpeg?auto=compress&cs=tinysrgb&w=1200',
-          title: 'Ateliers culinaires interactifs',
-          description: 'Cours de cuisine tunisienne avec notre chef : couscous, tajines, pâtisseries orientales'
+          title: 'Masterclass culinaires privées',
+          description: 'Cours privés avec chefs étoilés de nos hôtels partenaires : secrets de la haute gastronomie tunisienne'
         }
       ]
     }
