@@ -159,3 +159,5 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
     </section>
   );
 }
+  )
+}
