@@ -15,8 +15,7 @@ import {
   Utensils,
   Music,
   Camera,
-  
-}Waves,
+  Waves,
   Mountain,
   BookOpen,
   ArrowRight,
@@ -347,6 +346,12 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
 
   const getActivityTypeInfo = (type: string) => {
     return activityTypes[type as keyof typeof activityTypes] || activityTypes.loisirs;
+  };
+
+  const currentDayActivities = weeklyProgram[selectedDay as keyof typeof weeklyProgram] || [];
+
+  return (
+    <section className="py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -524,15 +529,15 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
             <h3 className="text-4xl font-light mb-6 tracking-wide">Programme Sur Mesure</h3>
             <p className="text-xl text-slate-200 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
               Expériences entièrement personnalisables orchestrées par notre conciergerie dans nos hôtels partenaires d'exception.
-          </p>
-          <Button 
-            onClick={onStartWizard}
-            size="lg" 
+            </p>
+            <Button 
+              onClick={onStartWizard}
+              size="lg" 
               className="bg-white text-slate-800 hover:bg-slate-50 hover:text-slate-900 border-0 px-12 py-4 font-light text-lg tracking-wide transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
+            >
               Créer Mon Programme
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </div>
