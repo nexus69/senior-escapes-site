@@ -1,15 +1,15 @@
+Voici le package.json corrigé (build Next standard pour Vercel, ajout de critters, suppression du next export et du homepage inutile) :
 
 {
   "name": "senior-escapes-tunisie",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nexus69.github.io/senior-escapes-site",
-"scripts": {
-  "dev": "next dev",
-  "build": "next build && next export",
-  "start": "next start",
-  "lint": "next lint"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
@@ -39,13 +39,11 @@
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
-    "@types/node": "^20.14.0",
-    "@types/react": "^18.3.0",
-    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
+    "critters": "^0.0.20",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.3.0",
     "eslint": "^8.57.0",
@@ -70,6 +68,9 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/react-big-calendar": "^1.8.9"
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "@types/react-big-calendar": "^1.8.9",
+    "@types/react-dom": "^18.3.0"
   }
 }
