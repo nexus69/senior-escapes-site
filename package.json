@@ -1,12 +1,17 @@
+/package.json
 {
   "name": "senior-escapes-tunisie",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <=22"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "next telemetry disable"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
