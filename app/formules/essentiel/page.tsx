@@ -6,7 +6,6 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowLeft, Calendar, Phone, MessageCircle, Star, Users, Shield, Heart } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { BookingForm } from '@/components/booking-form';
 import { Breadcrumb } from '@/components/breadcrumb';
 
@@ -43,10 +42,10 @@ export default function EssentielPage() {
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">V❊</span>
+                <span className="text-white font-bold text-lg">SE</span>
               </div>
               <div className="ml-3">
-                <div className="text-lg font-bold text-gray-900">Vitanéo</div>
+                <div className="text-lg font-bold text-gray-900">Senior Escapes</div>
                 <div className="text-xs text-blue-600 font-medium">TUNISIE</div>
               </div>
             </Link>
@@ -68,13 +67,13 @@ export default function EssentielPage() {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <div>
-              <Badge className="mb-4 bg-blue-50 text-blue-700 border border-blue-200">Première Immersion</Badge>
+              <Badge className="mb-4 bg-gray-100 text-gray-700">Découverte</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                Expérience Essentielle
+                Séjour Essentiel
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Votre première immersion dans l&apos;art de vivre méditerranéen. Découvrez nos hôtels partenaires 
-                et l&apos;authenticité tunisienne dans un cadre sécurisé et raffiné.
+                Votre première expérience en Tunisie avec tout l'essentiel pour un séjour 
+                serein et accompagné. Idéal pour découvrir notre concept et la douceur de vivre tunisienne.
               </p>
             </div>
 
@@ -93,31 +92,28 @@ export default function EssentielPage() {
               <Button 
                 size="lg" 
                 onClick={() => setShowBookingForm(true)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Réserver cette expérience
+                Réserver maintenant
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-blue-300 text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-xl"
+                className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Conseil personnalisé
+                Discuter avec Sophie
               </Button>
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative w-full h-96 lg:h-full">
-            <Image
+          <div className="relative">
+            <img
               src="https://images.pexels.com/photos/8170256/pexels-photo-8170256.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Expérience Essentielle - Art de vivre méditerranéen"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="rounded-2xl shadow-xl"
+              alt="Séjour Essentiel - Moments conviviaux"
+              className="w-full h-96 lg:h-full object-cover rounded-2xl shadow-xl"
             />
             <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3">
               <div className="flex items-center space-x-1">
@@ -133,45 +129,45 @@ export default function EssentielPage() {
         {/* What's Included Section */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Votre expérience résidentielle inclut
+            Ce qui est inclus dans votre séjour
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Shield,
-                title: "Suite dans hôtel partenaire 4★",
-                description: "Suite confortable avec vue jardin, terrasse privée et services hôteliers inclus",
+                title: "Hébergement confortable",
+                description: "Studio ou appartement 1 pièce meublé avec vue sur jardin privé et balcon",
                 color: "blue"
               },
               {
                 icon: Users,
-                title: "Conciergerie francophone dédiée",
-                description: "Équipe de conciergerie disponible 6j/7 pour tous vos besoins et demandes personnalisées",
+                title: "Référent francophone dédié",
+                description: "Accompagnement personnalisé par Sophie Martin, disponible 6j/7 pour tous vos besoins",
                 color: "blue"
               },
               {
                 icon: Heart,
-                title: "Programme culturel authentique",
-                description: "Activités raffinées : bien-être, découvertes culturelles, soirées conviviales",
+                title: "Activités hebdomadaires raffinées",
+                description: "3 activités par semaine : aquagym, visite culturelle, soirée musicale",
                 color: "blue"
               },
               {
                 icon: Shield,
-                title: "Assistance premium 24h/24",
-                description: "Support francophone permanent, coordination médicale et assistance administrative",
+                title: "Assistance 24h/24 premium",
+                description: "Numéro d'urgence francophone, assistance médicale et administrative",
                 color: "blue"
               },
               {
                 icon: Users,
-                title: "Services hôteliers inclus",
-                description: "WiFi premium, service de chambre, linge fourni, accès aux équipements de l'hôtel",
+                title: "Services de base",
+                description: "WiFi gratuit, ménage hebdomadaire, linge de maison et de toilette",
                 color: "blue"
               },
               {
                 icon: Heart,
-                title: "Mobilité assurée",
-                description: "Navettes vers commerces et activités, transferts organisés selon vos besoins",
+                title: "Transport local",
+                description: "Navette vers les commerces 2x/semaine, transport vers activités inclus",
                 color: "blue"
               }
             ].map((feature, index) => (
@@ -195,23 +191,23 @@ export default function EssentielPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Votre conciergerie personnalisée
+                Votre accompagnement personnalisé
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Notre équipe de conciergerie francophone vous accompagne dès votre arrivée 
-                pour une expérience résidentielle parfaitement orchestrée.
+                Sophie Martin, votre référente francophone, vous accompagne dès votre arrivée 
+                pour une intégration en douceur.
               </p>
               
               <div className="space-y-4">
                 {[
-                  "Accueil VIP à l'aéroport et transfert privé",
-                  "Installation dans votre suite et présentation des services",
-                  "Assistance bancaire et administrative locale",
+                  "Accueil personnalisé à l'aéroport",
+                  "Installation et présentation du logement",
+                  "Ouverture compte bancaire local (si souhaité)",
                   "Présentation des commerces et services de proximité",
-                  "Réservations activités et expériences culturelles",
-                  "Suivi personnalisé de votre confort et bien-être",
-                  "Support pour toutes vos démarches quotidiennes",
-                  "Liaison privilégiée avec vos proches en Europe"
+                  "Inscription aux activités de votre choix",
+                  "Suivi régulier de votre bien-être",
+                  "Assistance pour vos démarches administratives",
+                  "Coordination avec votre famille en France"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -224,24 +220,19 @@ export default function EssentielPage() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center border border-blue-200">
+              <div className="bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl p-8 text-center">
                 <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <div className="relative w-16 h-16">
-                    <Image
+                  <img
                     src="https://images.generated.photos/WCExNLBmxRJRbP_1MVpv_3G4IrRExowujljU3ZkUDic/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODk0NDU3LmpwZw.jpg"
                     alt="Sophie Martin"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      sizes="64px"
-                      className="rounded-full"
-                    />
-                  </div>
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">Sophie Martin</h4>
-                <p className="text-blue-600 font-medium mb-4">Directrice Conciergerie</p>
+                <p className="text-blue-600 font-medium mb-4">Directrice & Fondatrice</p>
                 <p className="text-gray-600 text-sm italic mb-4">
-                  "Chaque expérience résidentielle est unique. Notre équipe orchestre votre séjour 
-                  pour que vous profitiez pleinement de l'art de vivre méditerranéen."
+                  "Je personnalise chaque séjour car votre séjour est unique et mérite une expérience inoubliable. Disponible 6 
+                  jours sur 7 pour tous vos besoins."
                 </p>
                 <div className="flex justify-center space-x-4">
                   <Button size="sm" variant="outline">
@@ -265,10 +256,10 @@ export default function EssentielPage() {
               <div className="w-16 h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Garantie expérience</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Garantie satisfaction</h3>
               <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Si votre expérience ne correspond pas à vos attentes dans les 7 premiers jours, 
-                nous vous proposons une solution alternative ou un remboursement intégral.
+                Si vous n'êtes pas entièrement satisfait dans les 7 premiers jours, nous vous remboursons 
+                intégralement ou nous aidons à trouver une solution adaptée.
               </p>
             </div>
           </Card>
@@ -277,7 +268,7 @@ export default function EssentielPage() {
         {/* Your Activity Program */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Vos expériences culturelles incluses
+            Votre programme d'activités
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -285,29 +276,29 @@ export default function EssentielPage() {
               {
                 day: "Lundi",
                 time: "09:00 - 10:00",
-                activity: "Bien-être aquatique",
-                location: "Spa de l'hôtel partenaire",
-                badge: "Inclus"
+                activity: "Aquagym douce",
+                location: "Piscine de la résidence",
+                badge: "Participer"
               },
               {
                 day: "Mercredi",
                 time: "14:00 - 17:00",
-                activity: "Découverte culturelle",
-                location: "Patrimoine tunisien",
-                badge: "Inclus"
+                activity: "Visite culturelle",
+                location: "Sites historiques de Tunis",
+                badge: "Participer"
               },
               {
                 day: "Samedi",
                 time: "19:30 - 22:00",
-                activity: "Soirée conviviale",
-                location: "Salon de l'hôtel",
-                badge: "Inclus"
+                activity: "Soirée musicale",
+                location: "Salon communautaire",
+                badge: "Participer"
               }
             ].map((program, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
                 <div className="flex justify-between items-start mb-4">
                   <Badge className="bg-blue-100 text-blue-700">{program.day}</Badge>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                  <Button size="sm" className="bg-gray-900 hover:bg-gray-800 text-white">
                     {program.badge}
                   </Button>
                 </div>
@@ -320,36 +311,35 @@ export default function EssentielPage() {
           
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">
-              Expériences supplémentaires disponibles via votre conciergerie
+              Activités optionnelles supplémentaires disponibles sur demande
             </p>
             <Button variant="outline">
-              Découvrir toutes les expériences
+              Voir toutes les activités
             </Button>
           </div>
         </div>
 
         {/* Final CTA */}
         <div className="mt-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">Prêt pour votre première immersion ?</h3>
+          <h3 className="text-3xl font-bold mb-4">Prêt à découvrir la Tunisie ?</h3>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Réservez votre Expérience Essentielle et découvrez l'art de vivre méditerranéen 
-            dans nos hôtels partenaires d'exception.
+            Réservez votre Séjour Essentiel dès maintenant et bénéficiez de notre accompagnement personnalisé.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               onClick={() => setShowBookingForm(true)}
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold"
             >
               <Calendar className="w-5 h-5 mr-2" />
-              Réserver cette expérience
+              Réserver maintenant
             </Button>
             <Button 
               size="lg" 
-              className="bg-blue-700 text-white hover:bg-blue-800 border-0 px-8 py-4 text-lg font-semibold rounded-xl"
+              className="bg-blue-700 text-white hover:bg-blue-800 border-0 px-8 py-4 text-lg font-semibold"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Conciergerie : +33 1 XX XX XX XX
+              Parler à Sophie : +33 1 XX XX XX XX
             </Button>
           </div>
         </div>
