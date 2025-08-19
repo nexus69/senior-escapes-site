@@ -1,5 +1,3 @@
-Voici le package.json corrigé (build Next standard pour Vercel, ajout de critters, suppression du next export et du homepage inutile) :
-
 {
   "name": "senior-escapes-tunisie",
   "version": "0.1.0",
