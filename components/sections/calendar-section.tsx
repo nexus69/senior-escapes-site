@@ -31,44 +31,44 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
 
   const activityTypes = {
     'bien-etre': { 
-      color: 'bg-green-500', 
-      textColor: 'text-green-700',
-      bgColor: 'bg-green-50',
+      color: 'bg-slate-500', 
+      textColor: 'text-slate-700',
+      bgColor: 'bg-slate-50',
       label: 'Bien-être', 
       icon: Heart 
     },
     'culture': { 
-      color: 'bg-blue-500', 
-      textColor: 'text-blue-700',
-      bgColor: 'bg-blue-50',
+      color: 'bg-slate-600', 
+      textColor: 'text-slate-700',
+      bgColor: 'bg-slate-50',
       label: 'Culture', 
       icon: Palette 
     },
     'gastronomie': { 
-      color: 'bg-orange-500', 
-      textColor: 'text-orange-700',
-      bgColor: 'bg-orange-50',
+      color: 'bg-slate-500', 
+      textColor: 'text-slate-700',
+      bgColor: 'bg-slate-50',
       label: 'Gastronomie', 
       icon: Utensils 
     },
     'loisirs': { 
-      color: 'bg-purple-500', 
-      textColor: 'text-purple-700',
-      bgColor: 'bg-purple-50',
+      color: 'bg-slate-600', 
+      textColor: 'text-slate-700',
+      bgColor: 'bg-slate-50',
       label: 'Loisirs', 
       icon: Music 
     },
     'excursion': { 
-      color: 'bg-teal-500', 
-      textColor: 'text-teal-700',
-      bgColor: 'bg-teal-50',
+      color: 'bg-slate-500', 
+      textColor: 'text-slate-700',
+      bgColor: 'bg-slate-50',
       label: 'Excursions', 
       icon: Mountain 
     },
     'sport': { 
-      color: 'bg-indigo-500', 
-      textColor: 'text-indigo-700',
-      bgColor: 'bg-indigo-50',
+      color: 'bg-slate-600', 
+      textColor: 'text-slate-700',
+      bgColor: 'bg-slate-50',
       label: 'Sport', 
       icon: Waves 
     }
@@ -351,34 +351,41 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
   const currentDayActivities = weeklyProgram[selectedDay as keyof typeof weeklyProgram] || [];
 
   return (
-    <section id="activites" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section id="activites" className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative">
+      {/* Subtle Background Elements */}
+      <div className="absolute inset-0 opacity-3">
+        <div className="absolute top-32 right-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-32 w-96 h-96 bg-amber-200 rounded-full blur-3xl"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-            <CalendarDays className="w-4 h-4 mr-2 text-blue-600" />
-            <span className="text-blue-700 font-medium">Votre programme hebdomadaire</span>
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-full mb-8 shadow-sm">
+            <CalendarDays className="w-4 h-4 mr-2 text-slate-600" />
+            <span className="text-slate-700 font-medium tracking-wide">Votre programme hebdomadaire</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Une semaine type
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"> riche en découvertes</span>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-slate-800 mb-6 leading-tight">
+            Programme d'Exception
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-blue-600 to-slate-700 font-normal mt-2">Méditerranéen</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez la diversité de nos activités quotidiennes : culture, bien-être, gastronomie, 
-            excursions... Il y en a pour tous les goûts et tous les rythmes !
+          
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
+            Expériences raffinées orchestrées par notre conciergerie dans nos hôtels partenaires d'exception.
           </p>
         </div>
 
         {/* Activity Types Overview */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
           {Object.entries(activityTypes).map(([key, type]) => {
             const Icon = type.icon;
             return (
-              <Card key={key} className={`p-4 text-center ${type.bgColor} border-2 border-transparent hover:border-gray-200 transition-all duration-300`}>
-                <div className={`w-12 h-12 ${type.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
-                  <Icon className="w-6 h-6 text-white" />
+              <Card key={key} className="p-6 text-center bg-white border-2 border-slate-200/50 hover:border-slate-300 hover:shadow-lg transition-all duration-500 shadow-sm">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center mx-auto mb-4 border border-slate-300">
+                  <Icon className="w-6 h-6 text-slate-600" />
                 </div>
-                <div className={`font-semibold ${type.textColor} text-sm`}>
+                <div className="font-light text-slate-800 text-sm tracking-wide">
                   {type.label}
                 </div>
               </Card>
@@ -389,8 +396,8 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Day Selector */}
           <div className="lg:col-span-1">
-            <Card className="p-6 sticky top-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Choisissez votre jour</h3>
+            <Card className="p-8 sticky top-8 bg-white border-2 border-slate-200 shadow-lg">
+              <h3 className="text-xl font-light text-slate-800 mb-6 tracking-wide">Choisissez votre jour</h3>
               <div className="space-y-2">
                 {days.map((day) => (
                   <Button
@@ -398,24 +405,24 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
                     variant={selectedDay === day.id ? "default" : "outline"}
                     className={`w-full justify-start text-left ${
                       selectedDay === day.id 
-                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white' 
-                        : 'hover:bg-blue-50'
+                        ? 'bg-slate-800 text-white font-light' 
+                        : 'hover:bg-slate-50 border-slate-200 text-slate-700 font-light'
                     }`}
                     onClick={() => setSelectedDay(day.id)}
                   >
                     <CalendarDays className="w-4 h-4 mr-2" />
-                    {day.label}
+                    <span className="tracking-wide">{day.label}</span>
                   </Button>
                 ))}
               </div>
               
               {/* Day Stats */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="mt-8 pt-6 border-t border-slate-200">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="text-3xl font-light text-slate-800 mb-2 tracking-wide">
                     {currentDayActivities.length}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-slate-600 font-light tracking-wide">
                     activités ce jour
                   </div>
                 </div>
@@ -425,13 +432,13 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
 
           {/* Activities Timeline */}
           <div className="lg:col-span-3">
-            <Card className="p-8">
+            <Card className="p-12 bg-white border-2 border-slate-200 shadow-lg">
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-2xl font-bold text-gray-900">
+                <h3 className="text-3xl font-light text-slate-800 tracking-wide">
                   Programme du {days.find(d => d.id === selectedDay)?.label.toLowerCase()}
                 </h3>
-                <Badge className="bg-blue-100 text-blue-700 px-3 py-1">
-                  {currentDayActivities.length} activités
+                <Badge className="bg-slate-100 text-slate-700 px-4 py-2 font-light border border-slate-200">
+                  {currentDayActivities.length} expériences
                 </Badge>
               </div>
 
@@ -444,7 +451,7 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
                     <div key={index} className="relative">
                       {/* Timeline line */}
                       {index < currentDayActivities.length - 1 && (
-                        <div className="absolute left-6 top-16 w-0.5 h-16 bg-gray-200"></div>
+                        <div className="absolute left-6 top-16 w-px h-16 bg-slate-300"></div>
                       )}
                       
                       <div className="flex items-start space-x-6">
@@ -453,39 +460,39 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
                           <div className={`w-12 h-12 ${typeInfo.color} rounded-full flex items-center justify-center mb-2`}>
                             <Icon className="w-6 h-6 text-white" />
                           </div>
-                          <div className="text-sm font-bold text-gray-900">
+                          <div className="text-sm font-light text-slate-800 tracking-wide">
                             {activity.time}
                           </div>
                         </div>
 
                         {/* Activity Details */}
-                        <Card className={`flex-1 p-6 ${typeInfo.bgColor} border-l-4 ${typeInfo.color.replace('bg-', 'border-')} hover:shadow-lg transition-all duration-300`}>
+                        <Card className="flex-1 p-8 bg-white border-2 border-slate-200 hover:shadow-lg transition-all duration-500">
                           <div className="flex items-start justify-between mb-4">
                             <div className="flex-1">
                               <div className="flex items-center space-x-3 mb-2">
-                                <h4 className="text-xl font-bold text-gray-900">
+                                <h4 className="text-xl font-light text-slate-800 tracking-wide">
                                   {activity.title}
                                 </h4>
-                                <Badge className={`${typeInfo.color} text-white text-xs`}>
+                                <Badge className="bg-slate-100 text-slate-700 text-xs font-light border border-slate-200">
                                   {typeInfo.label}
                                 </Badge>
                               </div>
-                              <p className="text-gray-700 leading-relaxed mb-4">
+                              <p className="text-slate-600 leading-relaxed mb-6 font-light">
                                 {activity.description}
                               </p>
                             </div>
                           </div>
 
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                            <div className="flex items-center space-x-2 text-gray-600">
+                            <div className="flex items-center space-x-2 text-slate-600 font-light">
                               <MapPin className="w-4 h-4" />
                               <span>{activity.location}</span>
                             </div>
-                            <div className="flex items-center space-x-2 text-gray-600">
+                            <div className="flex items-center space-x-2 text-slate-600 font-light">
                               <Users className="w-4 h-4" />
                               <span>{activity.participants} participants max</span>
                             </div>
-                            <div className="flex items-center space-x-2 text-gray-600">
+                            <div className="flex items-center space-x-2 text-slate-600 font-light">
                               <Clock className="w-4 h-4" />
                               <span>Durée : {activity.duration}</span>
                             </div>
@@ -501,41 +508,43 @@ export function CalendarSection({ onStartWizard }: CalendarSectionProps) {
         </div>
 
         {/* Weekly Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <Card className="p-6 text-center bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-            <div className="text-3xl font-bold mb-2">35+</div>
-            <div className="text-blue-100">Activités par semaine</div>
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <Card className="p-8 text-center bg-white border-2 border-slate-200 shadow-lg">
+            <div className="text-4xl font-light text-slate-800 mb-3 tracking-wide">35+</div>
+            <div className="text-slate-600 font-light tracking-wide">Expériences par semaine</div>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-green-600 to-green-700 text-white">
-            <div className="text-3xl font-bold mb-2">6</div>
-            <div className="text-green-100">Types d'activités</div>
+          <Card className="p-8 text-center bg-white border-2 border-slate-200 shadow-lg">
+            <div className="text-4xl font-light text-slate-800 mb-3 tracking-wide">6</div>
+            <div className="text-slate-600 font-light tracking-wide">Types d'expériences</div>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-orange-600 to-orange-700 text-white">
-            <div className="text-3xl font-bold mb-2">100%</div>
-            <div className="text-orange-100">Optionnelles</div>
+          <Card className="p-8 text-center bg-white border-2 border-slate-200 shadow-lg">
+            <div className="text-4xl font-light text-slate-800 mb-3 tracking-wide">100%</div>
+            <div className="text-slate-600 font-light tracking-wide">Optionnelles</div>
           </Card>
-          <Card className="p-6 text-center bg-gradient-to-br from-purple-600 to-purple-700 text-white">
-            <div className="text-3xl font-bold mb-2">0€</div>
-            <div className="text-purple-100">Coût supplémentaire</div>
+          <Card className="p-8 text-center bg-white border-2 border-slate-200 shadow-lg">
+            <div className="text-4xl font-light text-slate-800 mb-3 tracking-wide">0€</div>
+            <div className="text-slate-600 font-light tracking-wide">Coût supplémentaire</div>
           </Card>
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-center text-white">
-          <Star className="w-12 h-12 mx-auto mb-6 text-yellow-300" />
-          <h3 className="text-3xl font-bold mb-4">Votre programme personnalisé</h3>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Ce programme est adaptable selon vos préférences ! Participez aux activités qui vous intéressent, 
-            à votre rythme, sans aucune obligation.
+        <div className="mt-20 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-16 text-center text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-slate-600/10"></div>
+          <div className="relative z-10">
+            <Star className="w-16 h-16 mx-auto mb-8 text-amber-300" />
+            <h3 className="text-4xl font-light mb-6 tracking-wide">Programme Sur Mesure</h3>
+            <p className="text-xl text-slate-200 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+              Expériences entièrement personnalisables orchestrées par notre conciergerie dans nos hôtels partenaires d'exception.
           </p>
           <Button 
             onClick={onStartWizard}
             size="lg" 
-            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold"
+              className="bg-white text-slate-800 hover:bg-slate-50 hover:text-slate-900 border-0 px-12 py-4 font-light text-lg tracking-wide transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            Personnaliser mon séjour
+              Créer Mon Programme
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
+          </div>
         </div>
       </div>
     </section>
