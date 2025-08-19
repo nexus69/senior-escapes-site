@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowLeft, Calendar, Phone, MessageCircle, Star, Users, Shield, Heart, Camera } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BookingForm } from '@/components/booking-form';
 import { Breadcrumb } from '@/components/breadcrumb';
 
@@ -110,11 +111,14 @@ export default function PremiumPage() {
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative">
-            <img
+          <div className="relative w-full h-96 lg:h-full">
+            <Image
               src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Hébergement premium avec vue panoramique"
-              className="w-full h-96 lg:h-full object-cover rounded-2xl shadow-xl"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="rounded-2xl shadow-xl"
             />
             <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3">
               <div className="flex items-center space-x-1">

@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check, ArrowLeft, Calendar, Phone, MessageCircle, Star, Users, Shield, Heart } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BookingForm } from '@/components/booking-form';
 import { Breadcrumb } from '@/components/breadcrumb';
 
@@ -109,11 +110,14 @@ export default function EssentielPage() {
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative">
-            <img
+          <div className="relative w-full h-96 lg:h-full">
+            <Image
               src="https://images.pexels.com/photos/8170256/pexels-photo-8170256.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Séjour Essentiel - Moments conviviaux"
-              className="w-full h-96 lg:h-full object-cover rounded-2xl shadow-xl"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="rounded-2xl shadow-xl"
             />
             <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3">
               <div className="flex items-center space-x-1">
@@ -222,11 +226,16 @@ export default function EssentielPage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-100 to-orange-100 rounded-2xl p-8 text-center">
                 <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <img
+                  <div className="relative w-16 h-16">
+                    <Image
                     src="https://images.generated.photos/WCExNLBmxRJRbP_1MVpv_3G4IrRExowujljU3ZkUDic/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/ODk0NDU3LmpwZw.jpg"
                     alt="Sophie Martin"
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="64px"
+                      className="rounded-full"
+                    />
+                  </div>
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">Sophie Martin</h4>
                 <p className="text-blue-600 font-medium mb-4">Directrice & Fondatrice</p>
