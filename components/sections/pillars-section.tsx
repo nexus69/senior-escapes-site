@@ -8,45 +8,48 @@ export function PillarsSection() {
   const pillars = [
     {
       icon: Users,
-      title: "Conciergerie d'Exception",
-      description: "Une équipe francophone dédiée orchestre chaque détail de votre expérience résidentielle dans nos hôtels partenaires.",
+      title: "Conciergerie Dédiée",
+      subtitle: "Excellence Personnalisée",
+      description: "Une équipe francophone experte orchestre chaque détail de votre expérience résidentielle avec la discrétion et l'efficacité des plus grands palaces.",
       features: [
-        "Conciergerie personnelle francophone 6j/7",
-        "Coordination privilégiée avec vos praticiens",
-        "Assistance administrative experte",
-        "Support premium 24h/24 en français"
+        "Conciergerie personnelle francophone",
+        "Coordination médicale privilégiée", 
+        "Assistance administrative discrète",
+        "Support premium 24h/24"
       ],
-      highlight: "Excellence",
-      stats: "98% satisfaction",
-      gradient: "from-slate-600 to-blue-700"
+      number: "01",
+      stats: "98% de satisfaction",
+      color: "blue"
     },
     {
       icon: Heart,
-      title: "Art de Vivre Méditerranéen",
-      description: "Découvrez l'authenticité tunisienne dans le cadre raffiné de nos hôtels partenaires d'exception.",
+      title: "Art de Vivre",
+      subtitle: "Authenticité Méditerranéenne", 
+      description: "Découvrez les trésors de la culture tunisienne dans le cadre préservé de nos résidences partenaires, loin du tourisme de masse.",
       features: [
-        "Expériences culturelles authentiques",
-        "Excursions privées avec guides experts",
-        "Gastronomie méditerranéenne raffinée",
-        "Événements dans nos resorts partenaires"
+        "Expériences culturelles privées",
+        "Guides historiens reconnus",
+        "Gastronomie méditerranéenne d'exception",
+        "Accès privilégié au patrimoine"
       ],
-      highlight: "Authenticité",
+      number: "02",
       stats: "300 jours de soleil",
-      gradient: "from-amber-500 to-orange-600"
+      color: "amber"
     },
     {
       icon: Shield,
       title: "Sérénité Absolue",
-      description: "Votre tranquillité d'esprit assurée par nos partenariats d'excellence et notre expertise reconnue.",
+      subtitle: "Confiance & Expertise",
+      description: "Votre tranquillité d'esprit garantie par nos partenariats d'excellence et notre expertise reconnue depuis plus de 5 ans.",
       features: [
-        "Hôtels partenaires 4★ et 5★ sécurisés",
-        "Partenariats médicaux d'excellence",
-        "Assurance expérience complète",
-        "Expertise reconnue depuis 5 ans"
+        "Résidences partenaires certifiées",
+        "Partenariats médicaux d'excellence", 
+        "Assurance tous risques incluse",
+        "Expertise reconnue depuis 2019"
       ],
-      highlight: "Confiance",
-      stats: "0 incident",
-      gradient: "from-emerald-500 to-teal-600"
+      number: "03", 
+      stats: "Zéro incident majeur",
+      color: "emerald"
     }
   ];
 
@@ -59,114 +62,116 @@ export function PillarsSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Section Header - Style Épuré */}
-        <div className="text-center mb-24 sm:mb-28">
-          <div className="inline-flex items-center px-8 py-4 bg-white/90 backdrop-blur-sm border border-slate-200/40 rounded-full mb-12 shadow-lg">
-            <Star className="w-5 h-5 mr-3 text-slate-600" />
-            <span className="text-slate-700 font-medium text-lg tracking-wide">L'Excellence Vitanéo</span>
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-full mb-8 shadow-sm">
+            <Star className="w-4 h-4 mr-2 text-slate-600" />
+            <span className="text-slate-700 font-medium tracking-wide">L'Excellence Vitanéo</span>
           </div>
           
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-800 mb-10 leading-tight tracking-tight">
-            Trois Piliers
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-blue-600 to-slate-700 font-normal mt-3"> d'Excellence</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-slate-800 mb-6 leading-tight">
+            Nos Trois Piliers
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-blue-600 to-slate-700 font-normal mt-2">d'Excellence</span>
           </h2>
           
-          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
-            L'art de vivre méditerranéen dans nos hôtels partenaires d'exception.
-            <span className="block mt-3 text-blue-600">Raffinement, authenticité, sérénité.</span>
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
+            Les fondements de votre expérience résidentielle d'exception en Méditerranée.
           </p>
         </div>
 
-        {/* Pillars Grid - Style Amanjena Épuré */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 sm:gap-16 mb-24">
+        {/* Pillars Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
+            const isCenter = index === 1;
             
             return (
-              <Card 
-                key={index} 
-                className="relative p-12 sm:p-16 bg-white/95 backdrop-blur-sm border border-slate-200/30 hover:border-slate-300/40 hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-6 group overflow-hidden rounded-3xl"
-              >
-                {/* Subtle Decorative Element */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-125 transition-transform duration-1000"></div>
+              <div key={index} className="relative">
+                {/* Separator Line - Only between pillars */}
+                {index < pillars.length - 1 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-px h-32 bg-gradient-to-b from-transparent via-slate-300 to-transparent transform -translate-y-1/2 z-10"></div>
+                )}
                 
-                {/* Highlight Badge */}
-                <div className={`absolute top-8 right-8 bg-gradient-to-r ${pillar.gradient} text-white px-5 py-2 rounded-full text-sm font-medium shadow-lg`}>
-                  {pillar.highlight}
-                </div>
-
-                {/* Icon - Style Épuré */}
-                <div className={`w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br ${pillar.gradient} rounded-2xl flex items-center justify-center mb-12 group-hover:scale-110 transition-transform duration-700 shadow-xl`}>
-                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
-                </div>
-
-                {/* Content - Centré et Épuré */}
-                <div className="space-y-8 text-center">
-                  <div>
-                    <h3 className="text-3xl sm:text-4xl font-light text-slate-800 mb-6 tracking-wide leading-tight">
-                      {pillar.title}
-                    </h3>
-                    
-                    <p className="text-slate-600 leading-relaxed text-lg font-light max-w-sm mx-auto">
-                      {pillar.description}
-                    </p>
+                <Card className={`relative p-8 bg-white/95 backdrop-blur-sm border border-slate-200/40 hover:border-slate-300/50 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group ${isCenter ? 'lg:scale-105 lg:shadow-lg' : ''}`}>
+                  {/* Pillar Number */}
+                  <div className="absolute top-6 right-6 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">
+                    <span className="text-slate-600 text-sm font-medium">{pillar.number}</span>
                   </div>
 
-                  {/* Features List - Style Minimaliste */}
-                  <div className="space-y-4">
-                    {pillar.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center justify-center space-x-3 group/item">
-                        <div className={`w-6 h-6 bg-gradient-to-br ${pillar.gradient} rounded-full flex items-center justify-center flex-shrink-0 shadow-md`}>
-                          <CheckCircle className="w-3 h-3 text-white" />
+                  {/* Icon - Plus discret */}
+                  <div className={`w-12 h-12 bg-${pillar.color}-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-${pillar.color}-100 transition-colors duration-300`}>
+                    <Icon className={`w-6 h-6 text-${pillar.color}-600`} />
+                  </div>
+
+                  {/* Content */}
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-light text-slate-800 mb-2 leading-tight">
+                        {pillar.title}
+                      </h3>
+                      <p className={`text-sm font-medium text-${pillar.color}-600 mb-4 tracking-wide uppercase`}>
+                        {pillar.subtitle}
+                      </p>
+                      <p className="text-slate-600 leading-relaxed font-light">
+                        {pillar.description}
+                      </p>
+                    </div>
+
+                    {/* Features List */}
+                    <div className="space-y-3">
+                      {pillar.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start space-x-3">
+                          <div className={`w-1.5 h-1.5 bg-${pillar.color}-500 rounded-full mt-2.5 flex-shrink-0`}></div>
+                          <span className="text-slate-700 text-sm leading-relaxed">
+                            {feature}
+                          </span>
                         </div>
-                        <span className="text-slate-700 font-medium text-base leading-relaxed">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
 
-                  {/* Stats */}
-                  <div className="inline-flex items-center px-6 py-3 bg-slate-50/60 backdrop-blur-sm rounded-full border border-slate-200/40 shadow-sm">
-                    <Star className="w-4 h-4 text-slate-500 mr-2" />
-                    <span className="text-slate-600 font-medium text-sm">{pillar.stats}</span>
+                    {/* Stats */}
+                    <div className="pt-4 border-t border-slate-200/50">
+                      <div className={`text-${pillar.color}-600 font-medium text-sm`}>
+                        {pillar.stats}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </div>
             );
           })}
         </div>
 
-        {/* Trust Indicators - Style Épuré */}
-        <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-12 sm:p-20 shadow-xl border border-slate-200/30 mb-24">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-12 text-center">
-            <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-light bg-gradient-to-r from-slate-600 to-blue-700 bg-clip-text text-transparent">500+</div>
-              <div className="text-slate-600 text-sm sm:text-base font-light">Résidents Accueillis</div>
+        {/* Trust Indicators */}
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-slate-200/40 mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-3xl font-light text-slate-700">500+</div>
+              <div className="text-slate-600 text-sm font-light">Résidents Accueillis</div>
             </div>
-            <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-light bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">5★</div>
-              <div className="text-slate-600 text-sm sm:text-base font-light">Hôtels Partenaires</div>
+            <div className="space-y-2">
+              <div className="text-3xl font-light text-slate-700">5★</div>
+              <div className="text-slate-600 text-sm font-light">Hôtels Partenaires</div>
             </div>
-            <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-light bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">98%</div>
-              <div className="text-slate-600 text-sm sm:text-base font-light">Satisfaction Client</div>
+            <div className="space-y-2">
+              <div className="text-3xl font-light text-slate-700">98%</div>
+              <div className="text-slate-600 text-sm font-light">Satisfaction Client</div>
             </div>
-            <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-light bg-gradient-to-r from-slate-600 to-slate-700 bg-clip-text text-transparent">24/7</div>
-              <div className="text-slate-600 text-sm sm:text-base font-light">Assistance Premium</div>
+            <div className="space-y-2">
+              <div className="text-3xl font-light text-slate-700">24/7</div>
+              <div className="text-slate-600 text-sm font-light">Assistance Premium</div>
             </div>
           </div>
         </div>
 
-        {/* Call to Action - Style Épuré */}
+        {/* Call to Action */}
         <div className="text-center">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-slate-700 via-blue-800 to-slate-800 hover:from-slate-800 hover:via-blue-900 hover:to-slate-900 text-white px-12 py-4 text-lg font-medium shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 rounded-xl"
+            className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
           >
-            Découvrir nos formules
-            <ArrowRight className="w-6 h-6 ml-3" />
+            Découvrir nos Expériences
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
       </div>
