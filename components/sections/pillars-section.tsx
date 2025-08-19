@@ -8,152 +8,119 @@ export function PillarsSection() {
   const pillars = [
     {
       icon: Users,
-      title: "Accompagnement Personnalisé",
-      description: "Une équipe francophone dédiée vous accompagne à chaque étape de votre séjour.",
+      title: "Conciergerie Dédiée",
+      description: "Une équipe francophone experte vous accompagne dans chaque aspect de votre expérience résidentielle.",
       features: [
-        "Conseiller personnel attitré disponible 6j/7",
-        "Assistance administrative complète et traductions",
-        "Suivi médical coordonné avec vos médecins",
-        "Support d'urgence 24h/24 en français"
+        "Conciergerie personnelle disponible 6j/7",
+        "Coordination administrative et traductions expertes",
+        "Liaison médicale privilégiée avec vos praticiens",
+        "Assistance premium 24h/24 en français"
       ],
-      color: "blue",
-      highlight: "Service Premium",
-      stats: "98% satisfaction"
+      highlight: "Service d'Exception",
+      stats: "98% satisfaction",
+      gradient: "from-blue-600 to-indigo-600"
     },
     {
       icon: Heart,
-      title: "Communauté Chaleureuse",
-      description: "Rejoignez une communauté dynamique de retraités européens partageant vos passions.",
+      title: "Communauté Exclusive",
+      description: "Rejoignez une communauté raffinée de résidents européens partageant l'art de vivre méditerranéen.",
       features: [
-        "Activités culturelles quotidiennes variées",
-        "Groupes d'intérêts communs et clubs",
-        "Excursions découvertes en groupe",
-        "Événements conviviaux et soirées thématiques"
+        "Expériences culturelles quotidiennes d'exception",
+        "Cercles d'intérêts raffinés et clubs exclusifs",
+        "Excursions privées en groupe restreint",
+        "Événements exclusifs dans nos hôtels partenaires"
       ],
-      color: "orange",
-      highlight: "Esprit Famille",
-      stats: "500+ résidents"
+      highlight: "Esprit Communauté",
+      stats: "350+ résidents",
+      gradient: "from-orange-500 to-red-500"
     },
     {
       icon: Shield,
-      title: "Sérénité Absolue",
-      description: "Profitez de votre séjour en toute tranquillité grâce à nos services sécurisés.",
+      title: "Sérénité d'Exception",
+      description: "Profitez de votre expérience résidentielle en toute quiétude grâce à nos services premium sécurisés.",
       features: [
-        "Résidences sécurisées 24h/24 avec surveillance",
-        "Partenariats médicaux fiables et reconnus",
-        "Assurance séjour complète incluse",
-        "Services de conciergerie haut de gamme"
+        "Hôtels partenaires sécurisés 24h/24 avec surveillance",
+        "Partenariats médicaux d'excellence reconnus",
+        "Assurance expérience complète incluse",
+        "Services de conciergerie ultra-premium"
       ],
-      color: "green",
-      highlight: "Sécurité Totale",
-      stats: "0 incident"
+      highlight: "Sécurité Absolue",
+      stats: "0 incident",
+      gradient: "from-emerald-600 to-green-600"
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colorMap = {
-      blue: {
-        bg: "bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100",
-        iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
-        iconColor: "text-white",
-        titleColor: "text-blue-900",
-        border: "border-blue-200",
-        accent: "text-blue-600",
-        highlight: "bg-blue-500",
-        button: "bg-blue-600 hover:bg-blue-700"
-      },
-      orange: {
-        bg: "bg-gradient-to-br from-orange-50 via-orange-100 to-red-100",
-        iconBg: "bg-gradient-to-br from-orange-500 to-red-500",
-        iconColor: "text-white",
-        titleColor: "text-orange-900",
-        border: "border-orange-200",
-        accent: "text-orange-600",
-        highlight: "bg-orange-500",
-        button: "bg-orange-600 hover:bg-orange-700"
-      },
-      green: {
-        bg: "bg-gradient-to-br from-green-50 via-green-100 to-emerald-100",
-        iconBg: "bg-gradient-to-br from-green-500 to-emerald-600",
-        iconColor: "text-white",
-        titleColor: "text-green-900",
-        border: "border-green-200",
-        accent: "text-green-600",
-        highlight: "bg-green-500",
-        button: "bg-green-600 hover:bg-green-700"
-      }
-    };
-    return colorMap[color as keyof typeof colorMap];
-  };
-
   return (
-    <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-gradient-to-br from-slate-50 via-white to-blue-50/20 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-3">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-400 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Section Header - Enhanced */}
-        <div className="text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-orange-100 rounded-full mb-8 shadow-lg">
-            <Star className="w-5 h-5 mr-3 text-blue-600" />
-            <span className="text-blue-700 font-bold text-base sm:text-lg">Nos 3 piliers fondamentaux</span>
+        {/* Section Header - Amanjena Style */}
+        <div className="text-center mb-20 sm:mb-24">
+          <div className="inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-full mb-10 shadow-xl">
+            <Star className="w-6 h-6 mr-4 text-slate-700" />
+            <span className="text-slate-800 font-medium text-lg sm:text-xl tracking-wide">L'Excellence Vitanéo</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-            Pourquoi choisir 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 block sm:inline"> Vitanéo</span> ?
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-light text-slate-800 mb-8 sm:mb-10 leading-tight tracking-tight">
+            Nos Trois Piliers
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-700 font-normal mt-2"> d'Excellence</span>
           </h2>
           
-          <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4 font-light">
-            Nous avons conçu une approche unique qui place l'humain au centre de chaque séjour, 
-            pour une expérience de retraite véritablement enrichissante.
+          <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-4 font-light">
+            L'art de vivre méditerranéen orchestré avec le raffinement et l'attention aux détails 
+            <span className="block mt-2 text-blue-600">qui caractérisent les plus beaux resorts du monde.</span>
           </p>
         </div>
 
-        {/* Enhanced Pillars Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 mb-16">
+        {/* Pillars Grid - Unified Luxury Design */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-12 mb-20">
           {pillars.map((pillar, index) => {
-            const colors = getColorClasses(pillar.color);
             const Icon = pillar.icon;
             
             return (
               <Card 
                 key={index} 
-                className={`relative p-8 sm:p-10 ${colors.bg} ${colors.border} border-2 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group overflow-hidden`}
+                className="relative p-10 sm:p-12 bg-white/90 backdrop-blur-sm border-2 border-slate-200/50 hover:border-slate-300/50 hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 group overflow-hidden rounded-3xl"
               >
+                {/* Decorative Elements */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white/30 to-transparent rounded-full -translate-y-20 translate-x-20 group-hover:scale-150 transition-transform duration-1000"></div>
+                
                 {/* Highlight Badge */}
-                <div className={`absolute top-4 right-4 ${colors.highlight} text-white px-3 py-1 rounded-full text-xs font-bold`}>
+                <div className={`absolute top-6 right-6 bg-gradient-to-r ${pillar.gradient} text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg`}>
                   {pillar.highlight}
                 </div>
 
-                {/* Icon with enhanced styling */}
-                <div className={`w-20 h-20 sm:w-24 sm:h-24 ${colors.iconBg} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 mx-auto sm:mx-0 shadow-xl`}>
-                  <Icon className={`w-10 h-10 sm:w-12 sm:h-12 ${colors.iconColor}`} />
+                {/* Icon - Unified Style */}
+                <div className={`w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-br ${pillar.gradient} rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-700 mx-auto sm:mx-0 shadow-2xl`}>
+                  <Icon className="w-12 h-12 sm:w-14 sm:h-14 text-white" />
                 </div>
 
                 {/* Content */}
-                <div className="space-y-6 text-center sm:text-left">
+                <div className="space-y-8 text-center sm:text-left">
                   <div>
-                    <h3 className={`text-2xl sm:text-3xl font-bold ${colors.titleColor} group-hover:scale-105 transition-transform duration-300 mb-4`}>
+                    <h3 className="text-3xl sm:text-4xl font-light text-slate-800 group-hover:scale-105 transition-transform duration-500 mb-6 tracking-wide">
                       {pillar.title}
                     </h3>
                     
-                    <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-medium">
+                    <p className="text-slate-600 leading-relaxed text-lg sm:text-xl font-light">
                       {pillar.description}
                     </p>
                   </div>
 
-                  {/* Enhanced Features List */}
-                  <div className="space-y-4">
+                  {/* Features List - Unified Style */}
+                  <div className="space-y-5">
                     {pillar.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start space-x-4 group/item">
-                        <div className={`w-6 h-6 ${colors.iconBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-200 shadow-md`}>
+                      <div key={featureIndex} className="flex items-start space-x-5 group/item">
+                        <div className={`w-7 h-7 bg-gradient-to-br ${pillar.gradient} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300 shadow-lg`}>
                           <CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-gray-800 font-semibold text-sm sm:text-base leading-relaxed group-hover/item:text-gray-900 transition-colors duration-200">
+                        <span className="text-slate-700 font-medium text-base sm:text-lg leading-relaxed group-hover/item:text-slate-800 transition-colors duration-300">
                           {feature}
                         </span>
                       </div>
@@ -161,9 +128,9 @@ export function PillarsSection() {
                   </div>
 
                   {/* Stats */}
-                  <div className={`inline-flex items-center px-4 py-2 ${colors.bg} rounded-full border ${colors.border}`}>
-                    <Star className={`w-4 h-4 ${colors.accent} mr-2`} />
-                    <span className={`${colors.accent} font-bold text-sm`}>{pillar.stats}</span>
+                  <div className="inline-flex items-center px-6 py-3 bg-slate-50/80 backdrop-blur-sm rounded-full border border-slate-200/50 shadow-md">
+                    <Star className="w-5 h-5 text-slate-600 mr-3" />
+                    <span className="text-slate-700 font-semibold text-base">{pillar.stats}</span>
                   </div>
                 </div>
               </Card>
@@ -171,24 +138,24 @@ export function PillarsSection() {
           })}
         </div>
 
-        {/* Enhanced Trust Indicators */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+        {/* Trust Indicators - Amanjena Style */}
+        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 sm:p-16 shadow-2xl border border-slate-200/50 mb-20">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 text-center">
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">350+</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">Résidents satisfaits</div>
+              <div className="text-5xl sm:text-6xl font-light bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">350+</div>
+              <div className="text-slate-600 text-base sm:text-lg font-light">Résidents d'Exception</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">5 ans</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">D'expérience en Tunisie</div>
+              <div className="text-5xl sm:text-6xl font-light bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">5 ans</div>
+              <div className="text-slate-600 text-base sm:text-lg font-light">D'Excellence Méditerranéenne</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">98%</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">Taux de satisfaction</div>
+              <div className="text-5xl sm:text-6xl font-light bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">98%</div>
+              <div className="text-slate-600 text-base sm:text-lg font-light">Satisfaction Absolue</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">24/7</div>
-              <div className="text-gray-600 text-sm sm:text-base font-medium">Assistance disponible</div>
+              <div className="text-5xl sm:text-6xl font-light bg-gradient-to-r from-slate-600 to-slate-700 bg-clip-text text-transparent">24/7</div>
+              <div className="text-slate-600 text-base sm:text-lg font-light">Conciergerie Premium</div>
             </div>
           </div>
         </div>
@@ -197,7 +164,7 @@ export function PillarsSection() {
         <div className="text-center mt-16">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 hover:from-blue-700 hover:via-purple-700 hover:to-orange-600 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300"
+            className="bg-gradient-to-r from-slate-800 via-blue-900 to-indigo-900 hover:from-slate-900 hover:via-blue-950 hover:to-indigo-950 text-white px-16 py-6 text-xl font-medium shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-500 rounded-2xl"
           >
             Découvrir nos formules
             <ArrowRight className="w-6 h-6 ml-3" />
