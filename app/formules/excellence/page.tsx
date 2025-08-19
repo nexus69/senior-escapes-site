@@ -44,10 +44,10 @@ export default function ExcellencePage() {
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">SE</span>
+                <span className="text-white font-bold text-lg">V❊</span>
               </div>
               <div className="ml-3">
-                <div className="text-lg font-bold text-gray-900">Senior Escapes</div>
+                <div className="text-lg font-bold text-gray-900">Vitanéo</div>
                 <div className="text-xs text-blue-600 font-medium">TUNISIE</div>
               </div>
             </Link>
@@ -69,13 +69,13 @@ export default function ExcellencePage() {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <div>
-              <Badge className="mb-4 bg-purple-500 text-white">Luxe Absolu</Badge>
+              <Badge className="mb-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg">Raffinement Absolu</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                Séjour Excellence
+                Expérience Excellence
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                L'art de vivre à la tunisienne dans un cadre d'exception. Services sur mesure, 
-                expériences exclusives et confort absolu pour un séjour inoubliable.
+                L'art de vivre méditerranéen dans sa forme la plus raffinée. Suites d'exception, 
+                expériences exclusives et services sur mesure dans nos plus beaux hôtels partenaires.
               </p>
             </div>
 
@@ -94,15 +94,15 @@ export default function ExcellencePage() {
               <Button 
                 size="lg" 
                 onClick={() => setShowBookingForm(true)}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Choisir Excellence
+                Réserver Excellence
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-purple-300 text-purple-700 hover:bg-purple-50 px-8 py-4 text-lg font-semibold"
+                className="border-purple-300 text-purple-700 hover:bg-purple-50 px-8 py-4 text-lg font-semibold rounded-xl"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Entretien personnalisé
@@ -114,7 +114,7 @@ export default function ExcellencePage() {
           <div className="relative w-full h-96 lg:h-full">
             <Image
               src="https://images.pexels.com/photos/3771120/pexels-photo-3771120.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Suite Excellence avec spa privé"
+              alt="Suite Excellence hôtel de luxe avec spa privé"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -134,45 +134,45 @@ export default function ExcellencePage() {
         {/* Services d'Exception */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Services d'Exception
+            Votre expérience résidentielle d'Exception
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Crown,
-                title: "Tout le Premium inclus",
+                title: "Expérience Premium incluse",
                 description: "Tous les services Premium + les prestations d'exception Excellence",
                 color: "purple"
               },
               {
                 icon: Gem,
-                title: "Suite avec terrasse privée",
-                description: "Appartement 3 pièces avec salon, chambre séparée, cuisine équipée et terrasse panoramique",
+                title: "Suite d'exception avec terrasse",
+                description: "Suite prestige avec salon privé, chambre master et terrasse panoramique exclusive",
                 color: "purple"
               },
               {
                 icon: Heart,
-                title: "Chef personnel 2x/semaine",
-                description: "Cuisine gastronomique à domicile avec chef tunisien formé à la cuisine française",
+                title: "Expériences gastronomiques privées",
+                description: "Chef personnel à disposition, cuisine gastronomique dans votre suite",
                 color: "purple"
               },
               {
                 icon: Sparkles,
                 title: "Spa & bien-être illimité",
-                description: "Accès libre au spa partenaire : massages, hammam, soins esthétiques",
+                description: "Accès privilégié aux spas partenaires : soins premium, hammam, massages",
                 color: "purple"
               },
               {
                 icon: Users,
-                title: "Excursions premium exclusives",
-                description: "Expériences exclusives : désert, oasis, sites archéologiques avec guide privé",
+                title: "Excursions exclusives sur mesure",
+                description: "Expériences uniques : désert VIP, oasis privées, patrimoine avec experts",
                 color: "purple"
               },
               {
                 icon: Shield,
-                title: "Chauffeur personnel",
-                description: "Véhicule avec chauffeur francophone à disposition 3 demi-journées/semaine",
+                title: "Chef personnel à disposition",
+                description: "Service de chef privé 2x/semaine pour expériences culinaires exclusives",
                 color: "purple"
               }
             ].map((feature, index) => (
@@ -194,34 +194,34 @@ export default function ExcellencePage() {
         {/* Expériences Exclusives */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Vos expériences exclusives
+            Vos expériences exclusives sur mesure
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title: "Désert du Sahara VIP",
-                description: "Expédition de 3 jours avec guide privé, campement de luxe",
+                description: "Expédition exclusive 3 jours avec guide expert et campement de luxe",
                 included: "Expérience unique",
-                details: "Transport privé, guide expert, hébergement premium"
+                details: "Transport premium, guide privé, campement 5★"
               },
               {
                 title: "Oasis de Tozeur & Chebika",
-                description: "Découverte des oasis avec déjeuner chez l'habitant",
-                included: "Journée complète",
-                details: "4x4 privé, guide local, repas traditionnel"
+                description: "Immersion dans les oasis avec expériences authentiques privées",
+                included: "Expérience privée",
+                details: "4x4 premium, guide expert, déjeuner d'exception"
               },
               {
                 title: "Dougga & Bulla Regia",
-                description: "Sites archéologiques avec archéologue privé",
-                included: "Journée complète",
-                details: "Guide archéologue, déjeuner gastronomique"
+                description: "Sites archéologiques avec archéologue renommé",
+                included: "Expérience exclusive",
+                details: "Expert archéologue, déjeuner gastronomique privé"
               },
               {
                 title: "Atelier cuisine avec chef étoilé",
-                description: "Cours privé avec chef renommé de Tunis",
-                included: "Demi-journée",
-                details: "Cours privé, dégustation, recettes exclusives"
+                description: "Masterclass culinaire avec chef étoilé tunisien",
+                included: "Expérience unique",
+                details: "Cours privé, dégustation premium, recettes secrètes"
               }
             ].map((experience, index) => (
               <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
@@ -245,32 +245,32 @@ export default function ExcellencePage() {
           
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">
-              Expériences sur mesure • Programme personnalisé selon vos passions
+              Expériences entièrement personnalisées selon vos passions et désirs
             </p>
             <Button variant="outline" className="border-purple-300 text-purple-700 hover:bg-purple-50">
-              Découvrir toutes les expériences
+              Créer mon programme sur mesure
             </Button>
           </div>
         </div>
 
         {/* Final CTA */}
         <div className="mt-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-12 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">Vivez l'Excellence à la Tunisienne</h3>
+          <h3 className="text-3xl font-bold mb-4">Le Raffinement Méditerranéen Absolu</h3>
           <p className="text-lg text-purple-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Un séjour d'exception où chaque détail est pensé pour votre confort.
+            Une expérience résidentielle d'exception où chaque détail est orchestré pour votre plaisir.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               onClick={() => setShowBookingForm(true)}
-              className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg font-semibold"
+              className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Calendar className="w-5 h-5 mr-2" />
               Réserver Excellence
             </Button>
             <Button 
               size="lg" 
-              className="bg-purple-700 text-white hover:bg-purple-800 border-0 px-8 py-4 text-lg font-semibold"
+              className="bg-purple-700 text-white hover:bg-purple-800 border-0 px-8 py-4 text-lg font-semibold rounded-xl"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Entretien personnalisé
@@ -279,20 +279,20 @@ export default function ExcellencePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 pt-8 border-t border-purple-400">
             <div>
-              <div className="text-3xl font-bold mb-2">90m²</div>
-              <div className="text-purple-100">Suite avec terrasse</div>
+              <div className="text-3xl font-bold mb-2">Suite</div>
+              <div className="text-purple-100">D'exception</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">5★</div>
-              <div className="text-purple-100">Services de luxe</div>
+              <div className="text-3xl font-bold mb-2">Chef</div>
+              <div className="text-purple-100">Personnel</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">24h/24</div>
-              <div className="text-purple-100">Conciergerie VIP</div>
+              <div className="text-3xl font-bold mb-2">Spa</div>
+              <div className="text-purple-100">Illimité</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">100%</div>
-              <div className="text-purple-100">Satisfaction garantie</div>
+              <div className="text-purple-100">Sur mesure</div>
             </div>
           </div>
         </div>

@@ -44,10 +44,10 @@ export default function PremiumPage() {
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-200">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">SE</span>
+                <span className="text-white font-bold text-lg">V❊</span>
               </div>
               <div className="ml-3">
-                <div className="text-lg font-bold text-gray-900">Senior Escapes</div>
+                <div className="text-lg font-bold text-gray-900">Vitanéo</div>
                 <div className="text-xs text-blue-600 font-medium">TUNISIE</div>
               </div>
             </Link>
@@ -69,13 +69,13 @@ export default function PremiumPage() {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <div>
-              <Badge className="mb-4 bg-orange-500 text-white">Confort Premium</Badge>
+              <Badge className="mb-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg">Art de Vivre Raffiné</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                Séjour Premium
+                Expérience Premium
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                L'expérience complète avec excursions culturelles, suivi médical privilégié 
-                et services de conciergerie. Le parfait équilibre entre confort, découverte et sérénité.
+                L'expérience complète dans nos hôtels 5★ avec excursions d'exception, suivi médical privilégié 
+                et conciergerie premium. L'équilibre parfait entre raffinement et authenticité.
               </p>
             </div>
 
@@ -94,15 +94,15 @@ export default function PremiumPage() {
               <Button 
                 size="lg" 
                 onClick={() => setShowBookingForm(true)}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Choisir Premium
+                Réserver Premium
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-orange-300 text-orange-700 hover:bg-orange-50 px-8 py-4 text-lg font-semibold"
+                className="border-orange-300 text-orange-700 hover:bg-orange-50 px-8 py-4 text-lg font-semibold rounded-xl"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Conseil personnalisé
@@ -114,7 +114,7 @@ export default function PremiumPage() {
           <div className="relative w-full h-96 lg:h-full">
             <Image
               src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Hébergement premium avec vue panoramique"
+              alt="Suite premium hôtel 5★ avec vue panoramique"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -134,45 +134,45 @@ export default function PremiumPage() {
         {/* Your Premium Experience */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Votre expérience Premium
+            Votre expérience résidentielle Premium
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Shield,
-                title: "Tout l'Essentiel inclus",
-                description: "Tous les services du Séjour Essentiel + les prestations d'exception Premium",
+                title: "Expérience Essentielle incluse",
+                description: "Tous les services de l'Expérience Essentielle + les prestations Premium",
                 color: "orange"
               },
               {
                 icon: Camera,
-                title: "Excursions culturelles",
-                description: "2 excursions par mois vers sites emblématiques : Carthage, Sidi Bou Saïd, Kairouan",
+                title: "Excursions privées d'exception",
+                description: "2 excursions mensuelles avec guide privé : Carthage, Sidi Bou Saïd, patrimoine tunisien",
                 color: "orange"
               },
               {
                 icon: Heart,
                 title: "Suivi médical privilégié",
-                description: "Consultations médicales avec Dr. Ben Ali dans sa santé, coordination avec médecin traitant",
+                description: "Consultations avec médecins partenaires, coordination avec votre médecin traitant",
                 color: "orange"
               },
               {
                 icon: Users,
-                title: "Transferts aéroport",
-                description: "Aller-retour en véhicule privé avec chauffeur francophone",
+                title: "Transferts privés aéroport",
+                description: "Service VIP aller-retour en véhicule premium avec chauffeur francophone",
                 color: "orange"
               },
               {
                 icon: Shield,
-                title: "Service de conciergerie",
-                description: "Assistance pour réservations restaurants, spectacles, démarches administratives",
+                title: "Conciergerie premium dédiée",
+                description: "Réservations restaurants gastronomiques, spectacles, assistance administrative complète",
                 color: "orange"
               },
               {
                 icon: Heart,
-                title: "Hébergement supérieur",
-                description: "Appartement 2 pièces avec salon séparé, cuisine équipée et terrasse ou balcon",
+                title: "Suite premium hôtel 5★",
+                description: "Suite spacieuse avec salon séparé, services hôteliers 5★ et terrasse panoramique",
                 color: "orange"
               }
             ].map((feature, index) => (
@@ -194,34 +194,34 @@ export default function PremiumPage() {
         {/* Cultural Excursions */}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Vos excursions culturelles incluses
+            Vos excursions privées d'exception
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title: "Carthage & Sidi Bou Saïd",
-                description: "Découverte des vestiges puniques et du village bleu et blanc",
-                included: "Journée complète",
-                details: "Transport, guide, déjeuner"
+                description: "Découverte privée des vestiges puniques et du village d'artistes",
+                included: "Expérience privée",
+                details: "Transport premium, guide expert, déjeuner gastronomique"
               },
               {
                 title: "Kairouan la Sainte",
-                description: "Visite de la première capitale arabe du Maghreb",
-                included: "Journée complète",
-                details: "Transport, guide, déjeuner"
+                description: "Immersion dans la première capitale arabe du Maghreb",
+                included: "Expérience privée",
+                details: "Transport premium, guide historien, déjeuner traditionnel"
               },
               {
                 title: "Dougga & Testour",
-                description: "Site romain le mieux conservé d'Afrique du Nord",
-                included: "Journée complète",
-                details: "Transport, guide, déjeuner"
+                description: "Site romain exceptionnel avec guide archéologue",
+                included: "Expérience privée",
+                details: "Transport premium, guide spécialisé, déjeuner panoramique"
               },
               {
                 title: "Hammamet & Nabeul",
-                description: "Stations balnéaires et artisanat local",
-                included: "Demi-journée",
-                details: "Transport, temps libre"
+                description: "Art de vivre côtier et artisanat d'exception",
+                included: "Expérience premium",
+                details: "Transport privé, ateliers artisanaux, dégustation"
               }
             ].map((excursion, index) => (
               <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
@@ -236,7 +236,7 @@ export default function PremiumPage() {
                   <p className="text-gray-600 mb-4">{excursion.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">{excursion.details}</span>
-                    <span className="text-orange-600 font-medium text-sm">Transport, guide, déjeuner</span>
+                    <span className="text-orange-600 font-medium text-sm">Expérience premium</span>
                   </div>
                 </div>
               </Card>
@@ -245,50 +245,50 @@ export default function PremiumPage() {
           
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">
-              2 excursions par mois • Programme adapté selon la saison
+              2 excursions privées par mois • Programme personnalisé selon vos passions
             </p>
             <Button variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-50">
-              Voir le calendrier complet
+              Découvrir toutes les expériences
             </Button>
           </div>
         </div>
 
         {/* Final CTA */}
         <div className="mt-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-12 text-center text-white">
-          <h3 className="text-3xl font-bold mb-4">Choisissez l'expérience Premium</h3>
+          <h3 className="text-3xl font-bold mb-4">L'Art de Vivre Méditerranéen Raffiné</h3>
           <p className="text-lg text-orange-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Le meilleur rapport qualité-prix pour un séjour résidentiel en Tunisie.
+            L'expérience résidentielle complète dans nos hôtels 5★ partenaires.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               onClick={() => setShowBookingForm(true)}
-              className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 text-lg font-semibold"
+              className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Calendar className="w-5 h-5 mr-2" />
               Réserver Premium
             </Button>
             <Button 
               size="lg" 
-              className="bg-orange-600 text-white hover:bg-orange-700 border-0 px-8 py-4 text-lg font-semibold"
+              className="bg-orange-600 text-white hover:bg-orange-700 border-0 px-8 py-4 text-lg font-semibold rounded-xl"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Construire mon séjour
+              Conseil personnalisé
             </Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-orange-400">
             <div>
-              <div className="text-3xl font-bold mb-2">200€</div>
-              <div className="text-orange-100">Économie vs Essentiel</div>
+              <div className="text-3xl font-bold mb-2">5★</div>
+              <div className="text-orange-100">Hôtels partenaires</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">2x</div>
-              <div className="text-orange-100">Plus d'excursions</div>
+              <div className="text-3xl font-bold mb-2">Privé</div>
+              <div className="text-orange-100">Excursions exclusives</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">95%</div>
-              <div className="text-orange-100">Taux de satisfaction</div>
+              <div className="text-orange-100">Satisfaction garantie</div>
             </div>
           </div>
         </div>
