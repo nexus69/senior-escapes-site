@@ -116,14 +116,14 @@ export function PackagesSection({ onStartWizard }: PackagesSectionProps) {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
                 
                 {/* Badge */}
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="absolute top-4 right-4">
                   <Badge className={`${pkg.badgeColor} px-6 py-2 text-sm font-semibold rounded-full`}>
                     {pkg.badge}
                   </Badge>
                 </div>
 
                 {/* Header */}
-                <div className="text-center mb-10 pt-6">
+                <div className="text-center mb-10 pt-2">
                   <div className={`w-20 h-20 mx-auto mb-6 bg-white/80 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg border border-white/50 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className={`w-10 h-10 ${pkg.iconColor}`} />
                   </div>
