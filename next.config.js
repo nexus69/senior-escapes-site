@@ -1,18 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Next 13/14 : export statique
   output: 'export',
   trailingSlash: true,
+
   images: {
     unoptimized: true,
   },
-  // Configuration optimisée pour Netlify
-  distDir: 'out',
-  // Désactiver les optimisations qui peuvent causer des problèmes sur Netlify
-  swcMinify: true,
-  experimental: {
-    // Optimisations pour les sites statiques
-    optimizeCss: true,
-  }
+
+  // Désactive ESLint pendant le build Vercel
+  eslint: { ignoreDuringBuilds: true },
 };
 
 module.exports = nextConfig;

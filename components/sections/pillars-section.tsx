@@ -32,7 +32,7 @@ export function PillarsSection() {
       ],
       color: "orange",
       highlight: "Esprit Famille",
-      stats: "500+ résidents"
+      stats: "400+ résidents"
     },
     {
       icon: Shield,
