@@ -179,7 +179,7 @@ export function PillarsSection() {
               <div className="text-gray-600 text-sm sm:text-base font-medium">Résidents satisfaits</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">5 ans</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">15 ans</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">D'expérience en Tunisie</div>
             </div>
             <div className="space-y-3">
