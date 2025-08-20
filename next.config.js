@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Next 13/14 : export statique
+  // Export statique (Next 13/14)
   output: 'export',
   trailingSlash: true,
+
+  // Vercel: pas de distDir "out", pas de tweaks Netlify
   images: { unoptimized: true },
 
-  // Désactive ESLint pendant le build Vercel
+  // Evite d'échouer le build sur des warnings ESLint en CI
   eslint: { ignoreDuringBuilds: true },
 };
 

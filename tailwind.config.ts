@@ -2,6 +2,12 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   darkMode: ['class'],
+  safelist: [
+    // Comprehensive dynamic color classes
+    {
+      pattern: /(bg|text|border|from|to|via)-(blue|orange|purple|red|indigo|green|yellow|emerald|gray)-(50|100|200|300|400|500|600|700|800|900)/,
+    },
+  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
