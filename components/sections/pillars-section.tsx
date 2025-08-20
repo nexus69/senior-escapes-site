@@ -175,7 +175,7 @@ export function PillarsSection() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">500+</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">350+</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">Résidents satisfaits</div>
             </div>
             <div className="space-y-3">
