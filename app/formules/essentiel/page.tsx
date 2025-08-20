@@ -72,7 +72,7 @@ export default function EssentielPage() {
                 Séjour Essentiel
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Votre première expérience en Tunisie avec tout l&apos;essentiel pour un séjour 
+                Votre première expérience en Tunisie avec tout l'essentiel pour un séjour 
                 serein et accompagné. Idéal pour découvrir notre concept et la douceur de vivre tunisienne.
               </p>
             </div>

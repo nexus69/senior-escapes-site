@@ -5,6 +5,7 @@ import { HeroSection } from '@/components/sections/hero-section';
 import { PillarsSection } from '@/components/sections/pillars-section';
 import { PackagesSection } from '@/components/sections/packages-section';
 import { LifeGallerySection } from '@/components/sections/life-gallery-section';
+import { BlogSection } from '@/components/sections/blog-section';
 import { CalendarSection } from '@/components/sections/calendar-section';
 import { TeamSection } from '@/components/sections/team-section';
 import { ContactSection } from '@/components/sections/contact-section';
@@ -26,6 +27,7 @@ export default function Home() {
         <PillarsSection />
         <PackagesSection onStartWizard={() => setShowWizard(true)} />
         <LifeGallerySection />
+        <BlogSection />
         <CalendarSection onStartWizard={() => setShowWizard(true)} />
         <TeamSection />
         <TrustSection />
