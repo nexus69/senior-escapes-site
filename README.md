@@ -6,5 +6,3 @@ Mis à jour le 5 juillet 2025.
 
 
 # Test commit 2
-Test Bolt→GitHub→Vercel
-test 
