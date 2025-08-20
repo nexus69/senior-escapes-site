@@ -175,19 +175,19 @@ export function PillarsSection() {
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">500+</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">350+</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">Résidents satisfaits</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">5 ans</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">15 ans</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">D'expérience en Tunisie</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">98%</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">97%</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">Taux de satisfaction</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">24/7</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">23/7</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">Assistance disponible</div>
             </div>
           </div>

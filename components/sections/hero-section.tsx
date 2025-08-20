@@ -45,7 +45,7 @@ export function HeroSection({ onStartWizard }: HeroSectionProps) {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 Vivez votre retraite
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">
-                  en toute sérénité
+                  en toute sérénité !
                 </span>
               </h1>
               

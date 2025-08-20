@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Next 13/14 : export statique
+  // Export statique autorisé (OK sur Vercel aussi)
   output: 'export',
   trailingSlash: true,
+
+  // Évite l’optimisation des images côté Next (tu utilises des images statiques)
   images: { unoptimized: true },
 
-  // Désactive ESLint pendant le build Vercel
+  // Vercel : ne pas échouer le build pour des warnings ESLint
   eslint: { ignoreDuringBuilds: true },
 };
 

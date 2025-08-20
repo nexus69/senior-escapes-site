@@ -1,5 +1,12 @@
-# Senior Escapes Tunisie
+# Senior Escapes Site
 
-Ce fichier est utilisé pour forcer un commit et déclencher un déploiement.
+Ce projet contient le site **Senior Escapes Tunisie** développé avec **Next.js 14, React, Tailwind CSS et TypeScript**.
 
-Mis à jour le 5 juillet 2025.
+## 🚀 Déploiement
+- Hébergé automatiquement sur **Vercel** via GitHub.
+- Chaque commit sur la branche `main` déclenche un nouveau déploiement.
+
+## 📦 Installation en local
+```bash
+npm install
+npm run dev

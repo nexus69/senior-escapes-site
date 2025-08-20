@@ -1,6 +1,0 @@
-[build]
-  command = "echo 'build disabled'"
-  publish = "public"
-
-[context.production.environment]
-  CI = "false"

@@ -9,7 +9,7 @@ export function Footer() {
 
         {/* Logo & Description */}
         <div>
-          <h3 className="text-2xl font-bold mb-4">Senior Escapes</h3>
+          <h3 className="text-2xl font-bold mb-4">Vitanéo</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
             Votre retraite active au soleil. Séjours longue durée en Tunisie avec accompagnement personnalisé.
           </p>
