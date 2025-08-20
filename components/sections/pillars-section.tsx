@@ -183,7 +183,7 @@ export function PillarsSection() {
               <div className="text-gray-600 text-sm sm:text-base font-medium">D'expérience en Tunisie</div>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">98%</div>
+              <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">97%</div>
               <div className="text-gray-600 text-sm sm:text-base font-medium">Taux de satisfaction</div>
             </div>
             <div className="space-y-3">
